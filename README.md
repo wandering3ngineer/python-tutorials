@@ -2,4 +2,4 @@ The python-tutorials project is basically a random assortment of some of my tuto
 
 <H2>Power Data Extraction</H2>
 
-<H2>Weather Data</H2>
+<H2>Weather Data Scraping</H2>
