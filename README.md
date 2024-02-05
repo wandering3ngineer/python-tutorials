@@ -10,5 +10,9 @@ My goal is to try and do some data-scraping using google to grab some basic weat
   
 <STRONG>For further details:</STRONG> <a href='https://www.wandering3ngineer.com/data-scraping-weather-data-from-web-search/' target="_blank" >https://www.wandering3ngineer.com/data-scraping-weather-data-from-web-search/</a>
   
-
+<H2>AI Voice Assistant</H2>
+Want to make your own AI voice assistant. Grab this code and use google speech recognition, speech synthesis and openai to make your own simple voice assistant. Give it a go. And check out the video on youtube for a more detailed tutorial. 
+  
+<STRONG>For further details:</STRONG> <a href='' target="_blank" ></a>
+  
   
