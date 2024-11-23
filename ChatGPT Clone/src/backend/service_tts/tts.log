@@ -1,0 +1,61 @@
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): text: This text is used to generate speech using the GTTS model
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): tld: co.uk
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): lang: en
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): slow: False
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): lang_check: True
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): pre_processor_funcs: [<function tone_marks at 0x7fb7c8d5ee80>, <function end_of_line at 0x7fb7c8d6c040>, <function abbreviations at 0x7fb7c8d6c0e0>, <function word_sub at 0x7fb7c8d6c180>]
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|…|，|\\(|‥|\\\n|،|：|、|—|\\[|\\]|\\)|;|¡|¿|。', re.IGNORECASE) from: [<function tone_marks at 0x7fb7c8d6c400>, <function period_comma at 0x7fb7c8d6c4a0>, <function colon at 0x7fb7c8d6c540>, <function other_punctuation at 0x7fb7c8d6c5e0>]>
+DEBUG: (gtts.tts[__init__]) (2024-07-04 19:51:23): timeout: None
+DEBUG: (gtts.lang[tts_langs]) (2024-07-04 19:51:23): langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 19:51:23): pre-processing: <function tone_marks at 0x7fb7c8d5ee80>
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 19:51:23): pre-processing: <function end_of_line at 0x7fb7c8d6c040>
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 19:51:23): pre-processing: <function abbreviations at 0x7fb7c8d6c0e0>
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 19:51:23): pre-processing: <function word_sub at 0x7fb7c8d6c180>
+DEBUG: (gtts.tts[_prepare_requests]) (2024-07-04 19:51:23): text_parts: ['This text is used to generate speech using the GTTS model']
+DEBUG: (gtts.tts[_prepare_requests]) (2024-07-04 19:51:23): text_parts: 1
+DEBUG: (gtts.tts[_prepare_requests]) (2024-07-04 19:51:23): data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22This%20text%20is%20used%20to%20generate%20speech%20using%20the%20GTTS%20model%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+DEBUG: (urllib3.connectionpool[_new_conn]) (2024-07-04 19:51:23): Starting new HTTPS connection (1): translate.google.co.uk:443
+DEBUG: (urllib3.connectionpool[_make_request]) (2024-07-04 19:51:24): https://translate.google.co.uk:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/11" 200 None
+DEBUG: (gtts.tts[stream]) (2024-07-04 19:51:24): headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '207'}
+DEBUG: (gtts.tts[stream]) (2024-07-04 19:51:24): url-0: https://translate.google.co.uk/_/TranslateWebserverUi/data/batchexecute
+DEBUG: (gtts.tts[stream]) (2024-07-04 19:51:24): status-0: 200
+DEBUG: (gtts.tts[write_to_fp]) (2024-07-04 19:51:24): part-0 written to <_io.BytesIO object at 0x7fb7c8c87600>
+DEBUG: (gtts.tts[stream]) (2024-07-04 19:51:24): part-0 created
+DEBUG: (TTS[text]) (2024-07-04 19:51:24): Model: gtts, Text: This text is used to generate speech using the GTTS model
+DEBUG: (TTS[text]) (2024-07-04 19:51:24): Returning audio stream
+DEBUG: (TTS[text]) (2024-07-04 19:51:24): b'\xff\xf3\x84\xc4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+DEBUG: (pydub.converter[log_conversion]) (2024-07-04 19:56:04): subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmphwgckrkd.wav', '-vn', '-f', 'wav', '-'])
+DEBUG: (TTS[text]) (2024-07-04 19:56:04): Model: pyttsx3, Text: This text is used to generate speech using the PYTTSX3 model
+DEBUG: (TTS[text]) (2024-07-04 19:56:04): Returning audio stream
+DEBUG: (TTS[text]) (2024-07-04 19:56:04): b'RIFF"<\x02\x00WAVEfmt \x10\x00\x00\x00'
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): text: Convert this to speech
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): tld: co.uk
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): lang: en
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): slow: False
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): lang_check: True
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): pre_processor_funcs: [<function tone_marks at 0x7fb7c8d5ee80>, <function end_of_line at 0x7fb7c8d6c040>, <function abbreviations at 0x7fb7c8d6c0e0>, <function word_sub at 0x7fb7c8d6c180>]
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): tokenizer_func: <bound method Tokenizer.run of re.compile('(?<=\\?).|(?<=!).|(?<=？).|(?<=！).|(?<!\\.[a-z])\\. |(?<!\\.[a-z]), |(?<!\\d):|…|，|\\(|‥|\\\n|،|：|、|—|\\[|\\]|\\)|;|¡|¿|。', re.IGNORECASE) from: [<function tone_marks at 0x7fb7c8d6c400>, <function period_comma at 0x7fb7c8d6c4a0>, <function colon at 0x7fb7c8d6c540>, <function other_punctuation at 0x7fb7c8d6c5e0>]>
+DEBUG: (gtts.tts[__init__]) (2024-07-04 22:00:39): timeout: None
+DEBUG: (gtts.lang[tts_langs]) (2024-07-04 22:00:39): langs: {'af': 'Afrikaans', 'ar': 'Arabic', 'bg': 'Bulgarian', 'bn': 'Bengali', 'bs': 'Bosnian', 'ca': 'Catalan', 'cs': 'Czech', 'da': 'Danish', 'de': 'German', 'el': 'Greek', 'en': 'English', 'es': 'Spanish', 'et': 'Estonian', 'fi': 'Finnish', 'fr': 'French', 'gu': 'Gujarati', 'hi': 'Hindi', 'hr': 'Croatian', 'hu': 'Hungarian', 'id': 'Indonesian', 'is': 'Icelandic', 'it': 'Italian', 'iw': 'Hebrew', 'ja': 'Japanese', 'jw': 'Javanese', 'km': 'Khmer', 'kn': 'Kannada', 'ko': 'Korean', 'la': 'Latin', 'lv': 'Latvian', 'ml': 'Malayalam', 'mr': 'Marathi', 'ms': 'Malay', 'my': 'Myanmar (Burmese)', 'ne': 'Nepali', 'nl': 'Dutch', 'no': 'Norwegian', 'pl': 'Polish', 'pt': 'Portuguese', 'ro': 'Romanian', 'ru': 'Russian', 'si': 'Sinhala', 'sk': 'Slovak', 'sq': 'Albanian', 'sr': 'Serbian', 'su': 'Sundanese', 'sv': 'Swedish', 'sw': 'Swahili', 'ta': 'Tamil', 'te': 'Telugu', 'th': 'Thai', 'tl': 'Filipino', 'tr': 'Turkish', 'uk': 'Ukrainian', 'ur': 'Urdu', 'vi': 'Vietnamese', 'zh-CN': 'Chinese (Simplified)', 'zh-TW': 'Chinese (Mandarin/Taiwan)', 'zh': 'Chinese (Mandarin)'}
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 22:00:39): pre-processing: <function tone_marks at 0x7fb7c8d5ee80>
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 22:00:39): pre-processing: <function end_of_line at 0x7fb7c8d6c040>
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 22:00:39): pre-processing: <function abbreviations at 0x7fb7c8d6c0e0>
+DEBUG: (gtts.tts[_tokenize]) (2024-07-04 22:00:39): pre-processing: <function word_sub at 0x7fb7c8d6c180>
+DEBUG: (gtts.tts[_prepare_requests]) (2024-07-04 22:00:39): text_parts: ['Convert this to speech']
+DEBUG: (gtts.tts[_prepare_requests]) (2024-07-04 22:00:39): text_parts: 1
+DEBUG: (gtts.tts[_prepare_requests]) (2024-07-04 22:00:39): data-0: f.req=%5B%5B%5B%22jQ1olc%22%2C%22%5B%5C%22Convert%20this%20to%20speech%5C%22%2C%5C%22en%5C%22%2Cnull%2C%5C%22null%5C%22%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&
+DEBUG: (urllib3.connectionpool[_new_conn]) (2024-07-04 22:00:39): Starting new HTTPS connection (1): translate.google.co.uk:443
+DEBUG: (urllib3.connectionpool[_make_request]) (2024-07-04 22:00:39): https://translate.google.co.uk:443 "POST /_/TranslateWebserverUi/data/batchexecute HTTP/11" 200 None
+DEBUG: (gtts.tts[stream]) (2024-07-04 22:00:39): headers-0: {'Referer': 'http://translate.google.com/', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8', 'Content-Length': '158'}
+DEBUG: (gtts.tts[stream]) (2024-07-04 22:00:39): url-0: https://translate.google.co.uk/_/TranslateWebserverUi/data/batchexecute
+DEBUG: (gtts.tts[stream]) (2024-07-04 22:00:39): status-0: 200
+DEBUG: (gtts.tts[write_to_fp]) (2024-07-04 22:00:39): part-0 written to <_io.BytesIO object at 0x7fb7c698f5b0>
+DEBUG: (gtts.tts[stream]) (2024-07-04 22:00:39): part-0 created
+DEBUG: (TTS[text]) (2024-07-04 22:00:39): Model: gtts, Text: Convert this to speech
+DEBUG: (TTS[text]) (2024-07-04 22:00:39): Returning audio stream
+DEBUG: (TTS[text]) (2024-07-04 22:00:39): b'\xff\xf3\x84\xc4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+DEBUG: (pydub.converter[log_conversion]) (2024-07-04 22:01:24): subprocess.call(['ffmpeg', '-y', '-f', 'wav', '-i', '/tmp/tmpz7pez4ei.wav', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+DEBUG: (TTS[text]) (2024-07-04 22:01:24): Model: pyttsx3, Text: Convert this to speech
+DEBUG: (TTS[text]) (2024-07-04 22:01:24): Returning audio stream
+DEBUG: (TTS[text]) (2024-07-04 22:01:24): b'RIFF\x1c\xe0\x00\x00WAVEfmt \x10\x00\x00\x00'
+INFO: (TTS[main]) (2024-07-05 01:23:53): Terminating server

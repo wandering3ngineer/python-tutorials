@@ -1,0 +1,12 @@
+{
+    "api_host": "192.168.8.167",
+    "api_port": "8002",
+
+    "llm_model": "gpt-4",
+    "stt_model": "google-sr",
+    "tts_model": "gtts",
+
+    "llm_model_choices" : ["llama-small-high", "gpt-4"],
+    "stt_model_choices" : ["google-sr", "vosk-small", "vosk-lgraph"],
+    "tts_model_choices" : ["gtts", "pyttsx3"]
+}

@@ -1,0 +1,140 @@
+DEBUG: (API[historyStore]) (2024-07-04 21:14:12): Model: gpt-4, Max Tokens: 100, Role: user, Content: Who is the fastest man in the world?
+DEBUG: (API[query]) (2024-07-04 21:14:12): {"model":"gpt-4", "messages":[{"role": "user", "content": "Who is the fastest person in the world"}, {"role": "system", "content": " The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds. This record has since been beaten by several other athletes."}, {"role": "user", "content": "Who is the fastest man in the world?"}], "max_tokens":100}
+INFO: (API[query]) (2024-07-04 21:14:12): Changing model to gpt-4 via http://0.0.0.0:8003/model/gpt-4
+INFO: (API[request]) (2024-07-04 21:14:12): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:14:12): Response: True
+INFO: (API[query]) (2024-07-04 21:14:12): Model has been changed to gpt-4
+DEBUG: (API[query]) (2024-07-04 21:14:12): Sending prompt Who is the fastest man in the world? via http://0.0.0.0:8003/relay/v1/chat/completions
+INFO: (API[request]) (2024-07-04 21:14:15): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:14:15): Response: {'id': 'chatcmpl-9hO4KccXsNGOsmemOdiMBkNztkhrf', 'object': 'chat.completion', 'created': 1720127652, 'model': 'gpt-4-0613', 'choices': [{'index': 0, 'message': {'role': 'assistant', 'content': 'Usain Bolt of Jamaica is the fastest man in the world. He holds the 100 meters world record with a time of 9.58 seconds.'}, 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 97, 'completion_tokens': 31, 'total_tokens': 128}, 'system_fingerprint': None}
+DEBUG: (API[query]) (2024-07-04 21:14:15): Obtained response Usain Bolt of Jamaica is the fastest man in the world. He holds the 100 meters world record with a time of 9.58 seconds. for prompt
+DEBUG: (API[historyStore]) (2024-07-04 21:14:15): Model: gpt-4, Max Tokens: 100, Role: system, Content: Usain Bolt of Jamaica is the fastest man in the world. He holds the 100 meters world record with a time of 9.58 seconds.
+DEBUG: (API[query]) (2024-07-04 21:14:15): Total time: 2.838228464126587
+INFO: (API[query]) (2024-07-04 21:14:15): Response: Usain Bolt of Jamaica is the fastest man in the world. He holds the 100 meters world record with a time of 9.58 seconds.
+DEBUG: (API[historyStore]) (2024-07-04 21:14:31): Model: llama-small-high, Max Tokens: 100, Role: user, Content: Who is the fastest man in the world?
+DEBUG: (API[query]) (2024-07-04 21:14:31): {"model":"llama-small-high", "messages":[{"role": "user", "content": "Who is the fastest person in the world"}, {"role": "system", "content": " The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds. This record has since been beaten by several other athletes."}, {"role": "user", "content": "Who is the fastest man in the world?"}, {"role": "system", "content": "Usain Bolt of Jamaica is the fastest man in the world. He holds the 100 meters world record with a time of 9.58 seconds."}, {"role": "user", "content": "Who is the fastest man in the world?"}], "max_tokens":100}
+INFO: (API[query]) (2024-07-04 21:14:31): Changing model to llama-small-high via http://0.0.0.0:8003/model/llama-small-high
+INFO: (API[request]) (2024-07-04 21:14:46): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:14:46): Response: True
+INFO: (API[query]) (2024-07-04 21:14:46): Model has been changed to llama-small-high
+DEBUG: (API[query]) (2024-07-04 21:14:46): Sending prompt Who is the fastest man in the world? via http://0.0.0.0:8003/relay/v1/chat/completions
+INFO: (API[request]) (2024-07-04 21:14:51): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:14:51): Response: {'id': 'chatcmpl-1062f4f9-f6c6-4911-bded-a7ba42b7e336', 'object': 'chat.completion', 'created': 1720127686, 'model': 'llama-small-high', 'choices': [{'index': 0, 'message': {'content': ' The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds.', 'role': 'assistant'}, 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 188, 'completion_tokens': 68, 'total_tokens': 256}}
+DEBUG: (API[query]) (2024-07-04 21:14:51): Obtained response  The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds. for prompt
+DEBUG: (API[historyStore]) (2024-07-04 21:14:51): Model: llama-small-high, Max Tokens: 100, Role: system, Content:  The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds.
+DEBUG: (API[query]) (2024-07-04 21:14:51): Total time: 19.63355016708374
+INFO: (API[query]) (2024-07-04 21:14:51): Response:  The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds.
+DEBUG: (API[historyStore]) (2024-07-04 21:15:21): Model: h, Max Tokens: 100, Role: user, Content: history
+DEBUG: (API[query]) (2024-07-04 21:15:21): {"model":"h", "messages":[{"role": "user", "content": "Who is the fastest person in the world"}, {"role": "system", "content": " The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds. This record has since been beaten by several other athletes."}, {"role": "user", "content": "Who is the fastest man in the world?"}, {"role": "system", "content": "Usain Bolt of Jamaica is the fastest man in the world. He holds the 100 meters world record with a time of 9.58 seconds."}, {"role": "user", "content": "Who is the fastest man in the world?"}, {"role": "system", "content": " The fastest person in the world according to Guinness World Records is Usain Bolt, a Jamaican sprinter who holds the record for running the fastest 100-meter race. He achieved this remarkable feat in 2008 with an incredible time of 9.54 seconds."}, {"role": "user", "content": "history"}], "max_tokens":100}
+INFO: (API[query]) (2024-07-04 21:15:21): Changing model to h via http://0.0.0.0:8003/model/h
+INFO: (API[request]) (2024-07-04 21:15:21): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:15:21): Response: False
+INFO: (API[query]) (2024-07-04 21:15:21): Unable to change model to h
+DEBUG: (API[query]) (2024-07-04 21:15:21): Sending prompt history via http://0.0.0.0:8003/relay/v1/chat/completions
+INFO: (API[request]) (2024-07-04 21:15:21): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:15:21): Contains binary data
+ERROR: (API[query]) (2024-07-04 21:15:21): Error. The model may not have started: byte indices must be integers or slices, not str
+DEBUG: (API[historyStore]) (2024-07-04 21:15:21): Model: h, Max Tokens: 100, Role: system, Content: b'All connection attempts failed'
+DEBUG: (API[query]) (2024-07-04 21:15:21): Total time: 0.1492764949798584
+INFO: (API[query]) (2024-07-04 21:15:21): Response: b'All connection attempts failed'
+INFO: (API[transcribe]) (2024-07-04 21:57:32): Sending audio to google-sr via http://0.0.0.0:8005/audio/google-sr
+INFO: (API[request]) (2024-07-04 21:57:34): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:57:34): Response: who is the tallest man in the world
+INFO: (API[transcribe]) (2024-07-04 21:57:34): Transcribed data: who is the tallest man in the world
+INFO: (API[transcribe]) (2024-07-04 21:57:47): Sending audio to vosk-small via http://0.0.0.0:8005/audio/vosk-small
+INFO: (API[request]) (2024-07-04 21:57:49): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:57:49): Response: who is the tallest man in the world
+INFO: (API[transcribe]) (2024-07-04 21:57:49): Transcribed data: who is the tallest man in the world
+INFO: (API[transcribe]) (2024-07-04 21:57:53): Sending audio to vosk-lgraph via http://0.0.0.0:8005/audio/vosk-lgraph
+INFO: (API[request]) (2024-07-04 21:57:55): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-04 21:57:55): Response: who is the tallest man in the world
+INFO: (API[transcribe]) (2024-07-04 21:57:55): Transcribed data: who is the tallest man in the world
+INFO: (API[speech]) (2024-07-04 22:00:39): Sending text to gtts via http://0.0.0.0:8006/text/gtts/Convert this to speech
+DEBUG: (httpx[load_ssl_context]) (2024-07-04 22:00:39): load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG: (httpx[load_ssl_context_verify]) (2024-07-04 22:00:39): load_verify_locations cafile='/home/headless/miniconda3/envs/project-api/lib/python3.11/site-packages/certifi/cacert.pem'
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:00:39): connect_tcp.started host='0.0.0.0' port=8006 local_address=None timeout=5.0 socket_options=None
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:00:39): connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f612b7ee050>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): send_request_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): send_request_headers.complete
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): send_request_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): send_request_body.complete
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): receive_response_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 04 Jul 2024 22:00:38 GMT'), (b'server', b'uvicorn'), (b'content-type', b'audio/wav'), (b'transfer-encoding', b'chunked')])
+INFO: (httpx[_send_single_request]) (2024-07-04 22:00:39): HTTP Request: POST http://0.0.0.0:8006/text/gtts/Convert%20this%20to%20speech "HTTP/1.1 200 OK"
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): receive_response_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): receive_response_body.complete
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): response_closed.started
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:00:39): response_closed.complete
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:00:39): close.started
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:00:39): close.complete
+INFO: (API[speech]) (2024-07-04 22:00:39): Response received: <Response [200 OK]>
+DEBUG: (API[speech]) (2024-07-04 22:00:39): b'\xff\xf3\x84\xc4\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+INFO: (API[speech]) (2024-07-04 22:00:39): Converted text to audio
+INFO: (API[speech]) (2024-07-04 22:01:24): Sending text to pyttsx3 via http://0.0.0.0:8006/text/pyttsx3/Convert this to speech
+DEBUG: (httpx[load_ssl_context]) (2024-07-04 22:01:24): load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG: (httpx[load_ssl_context_verify]) (2024-07-04 22:01:24): load_verify_locations cafile='/home/headless/miniconda3/envs/project-api/lib/python3.11/site-packages/certifi/cacert.pem'
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:01:24): connect_tcp.started host='0.0.0.0' port=8006 local_address=None timeout=5.0 socket_options=None
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:01:24): connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f612ad43d90>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): send_request_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): send_request_headers.complete
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): send_request_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): send_request_body.complete
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): receive_response_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Thu, 04 Jul 2024 22:01:23 GMT'), (b'server', b'uvicorn'), (b'content-type', b'audio/wav'), (b'transfer-encoding', b'chunked')])
+INFO: (httpx[_send_single_request]) (2024-07-04 22:01:24): HTTP Request: POST http://0.0.0.0:8006/text/pyttsx3/Convert%20this%20to%20speech "HTTP/1.1 200 OK"
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): receive_response_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): receive_response_body.complete
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): response_closed.started
+DEBUG: (httpcore.http11[trace]) (2024-07-04 22:01:24): response_closed.complete
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:01:24): close.started
+DEBUG: (httpcore.connection[trace]) (2024-07-04 22:01:24): close.complete
+INFO: (API[speech]) (2024-07-04 22:01:24): Response received: <Response [200 OK]>
+DEBUG: (API[speech]) (2024-07-04 22:01:24): b'RIFF\x1c\xe0\x00\x00WAVEfmt \x10\x00\x00\x00'
+INFO: (API[speech]) (2024-07-04 22:01:24): Converted text to audio
+DEBUG: (API[historyStore]) (2024-07-05 00:19:40): Model: llama-small-high, Max Tokens: 90, Role: user, Content: Please explain restful
+DEBUG: (API[query]) (2024-07-05 00:19:40): {"model":"llama-small-high", "messages":[{"role": "user", "content": "Please explain restful"}], "max_tokens":90}
+INFO: (API[query]) (2024-07-05 00:19:40): Changing model to llama-small-high via http://0.0.0.0:8003/model/llama-small-high
+INFO: (API[request]) (2024-07-05 00:19:55): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-05 00:19:55): Response: True
+INFO: (API[query]) (2024-07-05 00:19:55): Model has been changed to llama-small-high
+DEBUG: (API[query]) (2024-07-05 00:19:55): Sending prompt Please explain restful via http://0.0.0.0:8003/relay/v1/chat/completions
+INFO: (API[request]) (2024-07-05 00:19:59): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-05 00:19:59): Response: {'id': 'chatcmpl-fc9f0700-5d28-461b-8e67-56d39551c986', 'object': 'chat.completion', 'created': 1720138795, 'model': 'llama-small-high', 'choices': [{'index': 0, 'message': {'content': ' "Rest" is an essential component of well-being, and it refers to a state of relaxation and restoration after physical, mental or emotional activity. It\'s important because it helps maintain health, enhances sleep patterns, and can have positive effects on overall well-being. Restful sleep is the key to achieving a good night\'s rest, and when we are sleepy, tired or stressed, rest', 'role': 'assistant'}, 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 49, 'completion_tokens': 90, 'total_tokens': 139}}
+DEBUG: (API[query]) (2024-07-05 00:19:59): Obtained response  "Rest" is an essential component of well-being, and it refers to a state of relaxation and restoration after physical, mental or emotional activity. It's important because it helps maintain health, enhances sleep patterns, and can have positive effects on overall well-being. Restful sleep is the key to achieving a good night's rest, and when we are sleepy, tired or stressed, rest for prompt
+DEBUG: (API[historyStore]) (2024-07-05 00:19:59): Model: llama-small-high, Max Tokens: 90, Role: system, Content:  "Rest" is an essential component of well-being, and it refers to a state of relaxation and restoration after physical, mental or emotional activity. It's important because it helps maintain health, enhances sleep patterns, and can have positive effects on overall well-being. Restful sleep is the key to achieving a good night's rest, and when we are sleepy, tired or stressed, rest
+DEBUG: (API[query]) (2024-07-05 00:19:59): Total time: 19.223124265670776
+INFO: (API[query]) (2024-07-05 00:19:59): Response:  "Rest" is an essential component of well-being, and it refers to a state of relaxation and restoration after physical, mental or emotional activity. It's important because it helps maintain health, enhances sleep patterns, and can have positive effects on overall well-being. Restful sleep is the key to achieving a good night's rest, and when we are sleepy, tired or stressed, rest
+DEBUG: (API[historyStore]) (2024-07-05 00:20:21): Model: llama-small-high, Max Tokens: 90, Role: user, Content: No. I mean Restful API
+DEBUG: (API[query]) (2024-07-05 00:20:21): {"model":"llama-small-high", "messages":[{"role": "user", "content": "Please explain restful"}, {"role": "system", "content": " \"Rest\" is an essential component of well-being, and it refers to a state of relaxation and restoration after physical, mental or emotional activity. It's important because it helps maintain health, enhances sleep patterns, and can have positive effects on overall well-being. Restful sleep is the key to achieving a good night's rest, and when we are sleepy, tired or stressed, rest"}, {"role": "user", "content": "No. I mean Restful API"}], "max_tokens":90}
+INFO: (API[query]) (2024-07-05 00:20:21): Changing model to llama-small-high via http://0.0.0.0:8003/model/llama-small-high
+INFO: (API[request]) (2024-07-05 00:20:21): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-05 00:20:21): Response: True
+INFO: (API[query]) (2024-07-05 00:20:21): Model has been changed to llama-small-high
+DEBUG: (API[query]) (2024-07-05 00:20:21): Sending prompt No. I mean Restful API via http://0.0.0.0:8003/relay/v1/chat/completions
+INFO: (API[request]) (2024-07-05 00:20:26): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-05 00:20:26): Response: {'id': 'chatcmpl-8cc88e83-e2bc-4cf5-9531-92f69c50b5ff', 'object': 'chat.completion', 'created': 1720138821, 'model': 'llama-small-high', 'choices': [{'index': 0, 'message': {'content': " Restful means a state of relaxation and restoration after physical, mental or emotional activity. This is essential for maintaining health, enhancing sleep patterns, and contributing to overall well-being. Restful sleep plays an important role in achieving good night's rest, as it helps regulate our body's internal functions and promotes better sleep quality.\n\nWhen we are tired or stressed, our bodies", 'role': 'assistant'}, 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 163, 'completion_tokens': 90, 'total_tokens': 253}}
+DEBUG: (API[query]) (2024-07-05 00:20:26): Obtained response  Restful means a state of relaxation and restoration after physical, mental or emotional activity. This is essential for maintaining health, enhancing sleep patterns, and contributing to overall well-being. Restful sleep plays an important role in achieving good night's rest, as it helps regulate our body's internal functions and promotes better sleep quality.
+
+When we are tired or stressed, our bodies for prompt
+DEBUG: (API[historyStore]) (2024-07-05 00:20:26): Model: llama-small-high, Max Tokens: 90, Role: system, Content:  Restful means a state of relaxation and restoration after physical, mental or emotional activity. This is essential for maintaining health, enhancing sleep patterns, and contributing to overall well-being. Restful sleep plays an important role in achieving good night's rest, as it helps regulate our body's internal functions and promotes better sleep quality.
+
+When we are tired or stressed, our bodies
+DEBUG: (API[query]) (2024-07-05 00:20:26): Total time: 5.217201471328735
+INFO: (API[query]) (2024-07-05 00:20:26): Response:  Restful means a state of relaxation and restoration after physical, mental or emotional activity. This is essential for maintaining health, enhancing sleep patterns, and contributing to overall well-being. Restful sleep plays an important role in achieving good night's rest, as it helps regulate our body's internal functions and promotes better sleep quality.
+
+When we are tired or stressed, our bodies
+DEBUG: (API[historyStore]) (2024-07-05 00:20:40): Model: llama-small-high, Max Tokens: 90, Role: user, Content: No. I mean Restful API. Its for programming
+DEBUG: (API[query]) (2024-07-05 00:20:40): {"model":"llama-small-high", "messages":[{"role": "user", "content": "Please explain restful"}, {"role": "system", "content": " \"Rest\" is an essential component of well-being, and it refers to a state of relaxation and restoration after physical, mental or emotional activity. It's important because it helps maintain health, enhances sleep patterns, and can have positive effects on overall well-being. Restful sleep is the key to achieving a good night's rest, and when we are sleepy, tired or stressed, rest"}, {"role": "user", "content": "No. I mean Restful API"}, {"role": "system", "content": " Restful means a state of relaxation and restoration after physical, mental or emotional activity. This is essential for maintaining health, enhancing sleep patterns, and contributing to overall well-being. Restful sleep plays an important role in achieving good night's rest, as it helps regulate our body's internal functions and promotes better sleep quality.\n\nWhen we are tired or stressed, our bodies"}, {"role": "user", "content": "No. I mean Restful API. Its for programming"}], "max_tokens":90}
+INFO: (API[query]) (2024-07-05 00:20:40): Changing model to llama-small-high via http://0.0.0.0:8003/model/llama-small-high
+INFO: (API[request]) (2024-07-05 00:20:40): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-05 00:20:40): Response: True
+INFO: (API[query]) (2024-07-05 00:20:40): Model has been changed to llama-small-high
+DEBUG: (API[query]) (2024-07-05 00:20:40): Sending prompt No. I mean Restful API. Its for programming via http://0.0.0.0:8003/relay/v1/chat/completions
+INFO: (API[request]) (2024-07-05 00:20:43): Attempting to encode as UTF-8
+INFO: (API[request]) (2024-07-05 00:20:43): Response: {'id': 'chatcmpl-26a6fea9-a869-4c59-ac24-6de65629fe9f', 'object': 'chat.completion', 'created': 1720138840, 'model': 'llama-small-high', 'choices': [{'index': 0, 'message': {'content': ' "Restful" refers to the state of being rested or relaxed after physical, mental, and emotional activity. It helps maintain health, enhance sleep patterns, and has positive effects on overall well-being. Restful API refers to a set of functions or methods used in programming languages that can be helpful for creating websites and web applications. These APIs are designed to make it easy for developers to create and maintain user experiences without worry', 'role': 'assistant'}, 'logprobs': None, 'finish_reason': 'length'}], 'usage': {'prompt_tokens': 191, 'completion_tokens': 90, 'total_tokens': 281}}
+DEBUG: (API[query]) (2024-07-05 00:20:43): Obtained response  "Restful" refers to the state of being rested or relaxed after physical, mental, and emotional activity. It helps maintain health, enhance sleep patterns, and has positive effects on overall well-being. Restful API refers to a set of functions or methods used in programming languages that can be helpful for creating websites and web applications. These APIs are designed to make it easy for developers to create and maintain user experiences without worry for prompt
+DEBUG: (API[historyStore]) (2024-07-05 00:20:43): Model: llama-small-high, Max Tokens: 90, Role: system, Content:  "Restful" refers to the state of being rested or relaxed after physical, mental, and emotional activity. It helps maintain health, enhance sleep patterns, and has positive effects on overall well-being. Restful API refers to a set of functions or methods used in programming languages that can be helpful for creating websites and web applications. These APIs are designed to make it easy for developers to create and maintain user experiences without worry
+DEBUG: (API[query]) (2024-07-05 00:20:43): Total time: 3.6950063705444336
+INFO: (API[query]) (2024-07-05 00:20:43): Response:  "Restful" refers to the state of being rested or relaxed after physical, mental, and emotional activity. It helps maintain health, enhance sleep patterns, and has positive effects on overall well-being. Restful API refers to a set of functions or methods used in programming languages that can be helpful for creating websites and web applications. These APIs are designed to make it easy for developers to create and maintain user experiences without worry
+INFO: (API[main]) (2024-07-05 01:23:56): Terminating server
+INFO: (API[main]) (2024-07-12 19:22:02): Terminating server

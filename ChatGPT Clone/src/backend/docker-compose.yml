@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  service_llm:
+    build:
+      context: ./service_llm
+    container_name: service-llm
+    networks:
+      - my_network
+
+  service_stt:
+    build:
+      context: ./service_stt
+    container_name: service-stt
+    networks:
+      - my_network
+
+  service_tts:
+    build:
+      context: ./service_tts
+    container_name: service-tts
+    networks:
+      - my_network
+
+  service_api:
+    build:
+      context: ./service_api
+    container_name: service-api
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

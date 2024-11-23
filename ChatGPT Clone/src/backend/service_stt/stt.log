@@ -1,0 +1,67 @@
+DEBUG: (STT) (2024-07-04 20:03:59): Model: google-sr
+DEBUG: (pydub.converter) (2024-07-04 20:03:59): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:04:00): who is the tallest man in the world
+DEBUG: (STT) (2024-07-04 20:04:05): Model: google-sr
+DEBUG: (pydub.converter) (2024-07-04 20:04:05): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:04:06): what is the fastest way from Toronto to Paris
+DEBUG: (STT) (2024-07-04 20:04:11): Model: google-sr
+DEBUG: (pydub.converter) (2024-07-04 20:04:11): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:04:13): why do stars Sparkle and how big is the galaxy
+DEBUG: (STT) (2024-07-04 20:04:28): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:04:28): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+ERROR: (STT) (2024-07-04 20:04:30): ERROR: No speech was recognized, or processing failed.
+INFO: (STT) (2024-07-04 20:04:30): 
+DEBUG: (STT) (2024-07-04 20:04:51): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:04:51): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:04:52): Results: {'result': [{'conf': 1.0, 'end': 0.81, 'start': 0.51, 'word': 'what'}, {'conf': 1.0, 'end': 0.96, 'start': 0.81, 'word': 'is'}, {'conf': 1.0, 'end': 1.08, 'start': 0.96, 'word': 'the'}, {'conf': 1.0, 'end': 1.74, 'start': 1.08, 'word': 'fastest'}, {'conf': 1.0, 'end': 1.98, 'start': 1.74, 'word': 'way'}, {'conf': 1.0, 'end': 2.22, 'start': 1.98, 'word': 'from'}, {'conf': 1.0, 'end': 2.7, 'start': 2.22, 'word': 'toronto'}, {'conf': 0.74345, 'end': 2.85, 'start': 2.7, 'word': 'to'}, {'conf': 1.0, 'end': 3.51, 'start': 2.85, 'word': 'paris'}], 'text': 'what is the fastest way from toronto to paris'}
+INFO: (STT) (2024-07-04 20:04:52): what is the fastest way from toronto to paris
+DEBUG: (STT) (2024-07-04 20:04:56): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:04:56): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:04:57): Results: {'result': [{'conf': 1.0, 'end': 0.66, 'start': 0.24, 'word': 'who'}, {'conf': 1.0, 'end': 0.93, 'start': 0.69, 'word': 'is'}, {'conf': 1.0, 'end': 1.11, 'start': 0.93, 'word': 'the'}, {'conf': 1.0, 'end': 1.83, 'start': 1.11, 'word': 'tallest'}, {'conf': 1.0, 'end': 2.25, 'start': 1.86, 'word': 'man'}, {'conf': 1.0, 'end': 2.34, 'start': 2.25, 'word': 'in'}, {'conf': 1.0, 'end': 2.46, 'start': 2.34, 'word': 'the'}, {'conf': 1.0, 'end': 2.97, 'start': 2.46, 'word': 'world'}], 'text': 'who is the tallest man in the world'}
+INFO: (STT) (2024-07-04 20:04:57): who is the tallest man in the world
+DEBUG: (STT) (2024-07-04 20:05:01): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:05:01): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+ERROR: (STT) (2024-07-04 20:05:02): ERROR: No speech was recognized, or processing failed.
+INFO: (STT) (2024-07-04 20:05:02): 
+DEBUG: (STT) (2024-07-04 20:05:11): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:05:12): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+ERROR: (STT) (2024-07-04 20:05:14): ERROR: No speech was recognized, or processing failed.
+INFO: (STT) (2024-07-04 20:05:14): 
+DEBUG: (STT) (2024-07-04 20:05:19): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:05:19): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-vn', '-f', 'wav', '-'])
+DEBUG: (STT) (2024-07-04 20:05:28): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:05:28): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-vn', '-f', 'wav', '-'])
+DEBUG: (STT) (2024-07-04 20:05:42): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:05:42): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-vn', '-f', 'wav', '-'])
+DEBUG: (STT) (2024-07-04 20:05:52): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 20:05:52): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:05:53): Results: {'result': [{'conf': 1.0, 'end': 0.81, 'start': 0.51, 'word': 'what'}, {'conf': 1.0, 'end': 0.96, 'start': 0.81, 'word': 'is'}, {'conf': 1.0, 'end': 1.08, 'start': 0.96, 'word': 'the'}, {'conf': 1.0, 'end': 1.74, 'start': 1.08, 'word': 'fastest'}, {'conf': 1.0, 'end': 1.98, 'start': 1.74, 'word': 'way'}, {'conf': 1.0, 'end': 2.22, 'start': 1.98, 'word': 'from'}, {'conf': 1.0, 'end': 2.7, 'start': 2.22, 'word': 'toronto'}, {'conf': 0.746642, 'end': 2.85, 'start': 2.7, 'word': 'to'}, {'conf': 1.0, 'end': 3.51, 'start': 2.85, 'word': 'paris'}], 'text': 'what is the fastest way from toronto to paris'}
+INFO: (STT) (2024-07-04 20:05:53): what is the fastest way from toronto to paris
+DEBUG: (STT) (2024-07-04 20:06:04): Model: vosk-lgraph
+DEBUG: (pydub.converter) (2024-07-04 20:06:04): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:06:06): Results: {'result': [{'conf': 1.0, 'end': 0.81, 'start': 0.51, 'word': 'what'}, {'conf': 1.0, 'end': 0.96, 'start': 0.81, 'word': 'is'}, {'conf': 1.0, 'end': 1.08, 'start': 0.96, 'word': 'the'}, {'conf': 1.0, 'end': 1.74, 'start': 1.08, 'word': 'fastest'}, {'conf': 0.985949, 'end': 1.98, 'start': 1.74, 'word': 'way'}, {'conf': 1.0, 'end': 2.22, 'start': 1.980422, 'word': 'from'}, {'conf': 1.0, 'end': 2.73, 'start': 2.22, 'word': 'toronto'}, {'conf': 1.0, 'end': 2.85, 'start': 2.73, 'word': 'to'}, {'conf': 0.947803, 'end': 3.51, 'start': 2.85, 'word': 'paris'}], 'text': 'what is the fastest way from toronto to paris'}
+INFO: (STT) (2024-07-04 20:06:06): what is the fastest way from toronto to paris
+DEBUG: (STT) (2024-07-04 20:06:11): Model: vosk-lgraph
+DEBUG: (pydub.converter) (2024-07-04 20:06:11): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:06:13): Results: {'result': [{'conf': 1.0, 'end': 1.02, 'start': 0.66, 'word': 'why'}, {'conf': 0.998495, 'end': 1.169629, 'start': 1.02, 'word': 'do'}, {'conf': 0.85702, 'end': 1.768141, 'start': 1.170107, 'word': 'stars'}, {'conf': 1.0, 'end': 2.4, 'start': 1.768141, 'word': 'sparkle'}, {'conf': 1.0, 'end': 3.48, 'start': 3.3, 'word': 'and'}, {'conf': 1.0, 'end': 3.75, 'start': 3.48, 'word': 'how'}, {'conf': 1.0, 'end': 4.02, 'start': 3.75, 'word': 'big'}, {'conf': 1.0, 'end': 4.2, 'start': 4.02, 'word': 'is'}, {'conf': 1.0, 'end': 4.32, 'start': 4.2, 'word': 'the'}, {'conf': 1.0, 'end': 5.01, 'start': 4.32, 'word': 'galaxy'}], 'text': 'why do stars sparkle and how big is the galaxy'}
+INFO: (STT) (2024-07-04 20:06:13): why do stars sparkle and how big is the galaxy
+DEBUG: (STT) (2024-07-04 20:06:19): Model: vosk-lgraph
+DEBUG: (pydub.converter) (2024-07-04 20:06:19): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+ERROR: (STT) (2024-07-04 20:06:23): ERROR: No speech was recognized, or processing failed.
+INFO: (STT) (2024-07-04 20:06:23): 
+DEBUG: (STT) (2024-07-04 20:06:27): Model: vosk-lgraph
+DEBUG: (pydub.converter) (2024-07-04 20:06:27): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 20:06:30): Results: {'result': [{'conf': 1.0, 'end': 0.72, 'start': 0.33, 'word': 'what'}, {'conf': 1.0, 'end': 0.96, 'start': 0.72, 'word': 'was'}, {'conf': 1.0, 'end': 1.38, 'start': 0.96, 'word': 'wrong'}, {'conf': 1.0, 'end': 1.53, 'start': 1.38, 'word': 'with'}, {'conf': 1.0, 'end': 1.74, 'start': 1.53, 'word': 'my'}, {'conf': 1.0, 'end': 2.25, 'start': 1.77, 'word': 'previous'}, {'conf': 1.0, 'end': 3.0, 'start': 2.250374, 'word': 'recording'}, {'conf': 1.0, 'end': 3.48, 'start': 3.27, 'word': 'it'}, {'conf': 0.979639, 'end': 3.81, 'start': 3.48, 'word': 'looked'}, {'conf': 1.0, 'end': 4.139879, 'start': 3.81, 'word': 'like'}, {'conf': 0.993352, 'end': 4.38, 'start': 4.17, 'word': 'i'}, {'conf': 1.0, 'end': 4.62, 'start': 4.3802, 'word': 'did'}, {'conf': 1.0, 'end': 4.86, 'start': 4.62, 'word': 'it'}, {'conf': 1.0, 'end': 5.61, 'start': 5.01, 'word': 'completely'}, {'conf': 0.913315, 'end': 6.09, 'start': 5.610234, 'word': 'okay'}], 'text': 'what was wrong with my previous recording it looked like i did it completely okay'}
+INFO: (STT) (2024-07-04 20:06:30): what was wrong with my previous recording it looked like i did it completely okay
+DEBUG: (STT) (2024-07-04 21:57:32): Model: google-sr
+DEBUG: (pydub.converter) (2024-07-04 21:57:33): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 21:57:34): who is the tallest man in the world
+DEBUG: (STT) (2024-07-04 21:57:47): Model: vosk-small
+DEBUG: (pydub.converter) (2024-07-04 21:57:47): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 21:57:48): Results: {'result': [{'conf': 1.0, 'end': 0.66, 'start': 0.24, 'word': 'who'}, {'conf': 1.0, 'end': 0.93, 'start': 0.69, 'word': 'is'}, {'conf': 1.0, 'end': 1.11, 'start': 0.93, 'word': 'the'}, {'conf': 1.0, 'end': 1.83, 'start': 1.11, 'word': 'tallest'}, {'conf': 1.0, 'end': 2.25, 'start': 1.86, 'word': 'man'}, {'conf': 1.0, 'end': 2.34, 'start': 2.25, 'word': 'in'}, {'conf': 1.0, 'end': 2.46, 'start': 2.34, 'word': 'the'}, {'conf': 1.0, 'end': 2.97, 'start': 2.46, 'word': 'world'}], 'text': 'who is the tallest man in the world'}
+INFO: (STT) (2024-07-04 21:57:48): who is the tallest man in the world
+DEBUG: (STT) (2024-07-04 21:57:53): Model: vosk-lgraph
+DEBUG: (pydub.converter) (2024-07-04 21:57:53): subprocess.call(['ffmpeg', '-y', '-read_ahead_limit', '-1', '-i', 'cache:pipe:0', '-acodec', 'pcm_s16le', '-vn', '-f', 'wav', '-'])
+INFO: (STT) (2024-07-04 21:57:55): Results: {'result': [{'conf': 1.0, 'end': 0.66, 'start': 0.24, 'word': 'who'}, {'conf': 1.0, 'end': 0.93, 'start': 0.69, 'word': 'is'}, {'conf': 1.0, 'end': 1.11, 'start': 0.93, 'word': 'the'}, {'conf': 1.0, 'end': 1.83, 'start': 1.11, 'word': 'tallest'}, {'conf': 1.0, 'end': 2.25, 'start': 1.89, 'word': 'man'}, {'conf': 0.977604, 'end': 2.34, 'start': 2.25, 'word': 'in'}, {'conf': 1.0, 'end': 2.46, 'start': 2.340543, 'word': 'the'}, {'conf': 1.0, 'end': 2.97, 'start': 2.46, 'word': 'world'}], 'text': 'who is the tallest man in the world'}
+INFO: (STT) (2024-07-04 21:57:55): who is the tallest man in the world
+INFO: (STT) (2024-07-05 01:23:55): Terminating server

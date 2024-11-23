@@ -15,4 +15,5 @@ Want to make your own AI voice assistant. Grab this code and use google speech r
   
 <STRONG>For further details:</STRONG> <a href='https://youtu.be/bGKlWl9fif4' target="_blank" >https://youtu.be/bGKlWl9fif4</a>
   
-  
+<H2>ChatGPT Clone</H2>
+This code is demonstration code for a workshop done in the Summer of 2023 to teach professionals and tech students how to rapidly build and deploy (in 40 hours) their own LLM pre-trained model based voice chat system. The code provides all the foundations to build a microservice deployment of TTS, STT, LLM and API servcies on the backend and Flet / Flutter frontend. Deployment also require some docker container builds along with some shell scripts for testing and configuration. These are included

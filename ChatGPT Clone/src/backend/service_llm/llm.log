@@ -1,0 +1,68 @@
+INFO: (LLM[run_llm]) (2024-07-05 00:18:47): Start a new LLM process: ['python', '-m', 'llama_cpp.server', '--model', None, '--host', 'api.openai.com', '--port', '443', '--chat_format', 'chatml', '--verbose', 'False']
+ERROR: (LLM[run_llm]) (2024-07-05 00:18:47): Error: expected str, bytes or os.PathLike object, not NoneType
+ERROR: (LLM[run_llm]) (2024-07-05 00:18:47): Failed to start local LLM and unable to receive request into LLM
+INFO: (LLM[run_api]) (2024-07-05 00:18:47): Start a new API process ['uvicorn', 'llm:app', '--host', '0.0.0.0', '--port', '8003']
+INFO: (LLM[run_api]) (2024-07-05 00:18:47): PID of Started API Process: 15749
+INFO: (LLM[run_llm]) (2024-07-05 00:19:40): Start a new LLM process: ['python', '-m', 'llama_cpp.server', '--model', './models/tinyllama-1.1b-1t-openorca.Q6_K.gguf', '--host', '0.0.0.0', '--port', '8004', '--chat_format', 'chatml', '--verbose', 'False']
+INFO: (LLM[run_llm]) (2024-07-05 00:19:40): PID of Started LLM Process: 15767
+DEBUG: (httpx[load_ssl_context]) (2024-07-05 00:19:55): load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG: (httpx[load_ssl_context_verify]) (2024-07-05 00:19:55): load_verify_locations cafile='/home/headless/miniconda3/envs/project-llm/lib/python3.11/site-packages/certifi/cacert.pem'
+INFO: (LLM[relay]) (2024-07-05 00:19:55): http://0.0.0.0:8004/v1/chat/completions
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:19:55): connect_tcp.started host='0.0.0.0' port=8004 local_address=None timeout=900.0 socket_options=None
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:19:55): connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f46abd30290>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:55): send_request_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:55): send_request_headers.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:55): send_request_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:55): send_request_body.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:55): receive_response_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:59): receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 05 Jul 2024 00:19:54 GMT'), (b'server', b'uvicorn'), (b'content-length', b'694'), (b'content-type', b'application/json'), (b'openai-processing-ms', b'4138'), (b'x-request-id', b'3e636d87a8b7490e869254773acea6b0')])
+INFO: (httpx[_send_single_request]) (2024-07-05 00:19:59): HTTP Request: POST http://0.0.0.0:8004/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:59): receive_response_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:59): receive_response_body.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:59): response_closed.started
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:19:59): response_closed.complete
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:19:59): close.started
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:19:59): close.complete
+DEBUG: (httpx[load_ssl_context]) (2024-07-05 00:20:21): load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG: (httpx[load_ssl_context_verify]) (2024-07-05 00:20:21): load_verify_locations cafile='/home/headless/miniconda3/envs/project-llm/lib/python3.11/site-packages/certifi/cacert.pem'
+INFO: (LLM[relay]) (2024-07-05 00:20:21): http://0.0.0.0:8004/v1/chat/completions
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:21): connect_tcp.started host='0.0.0.0' port=8004 local_address=None timeout=900.0 socket_options=None
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:21): connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f46ad81d490>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:21): send_request_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:21): send_request_headers.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:21): send_request_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:21): send_request_body.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:21): receive_response_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:26): receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 05 Jul 2024 00:20:21 GMT'), (b'server', b'uvicorn'), (b'content-length', b'717'), (b'content-type', b'application/json'), (b'openai-processing-ms', b'5139'), (b'x-request-id', b'8b787347113047d1a32e08efd5ad3d23')])
+INFO: (httpx[_send_single_request]) (2024-07-05 00:20:26): HTTP Request: POST http://0.0.0.0:8004/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:26): receive_response_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:26): receive_response_body.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:26): response_closed.started
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:26): response_closed.complete
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:26): close.started
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:26): close.complete
+DEBUG: (httpx[load_ssl_context]) (2024-07-05 00:20:40): load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG: (httpx[load_ssl_context_verify]) (2024-07-05 00:20:40): load_verify_locations cafile='/home/headless/miniconda3/envs/project-llm/lib/python3.11/site-packages/certifi/cacert.pem'
+INFO: (LLM[relay]) (2024-07-05 00:20:40): http://0.0.0.0:8004/v1/chat/completions
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:40): connect_tcp.started host='0.0.0.0' port=8004 local_address=None timeout=900.0 socket_options=None
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:40): connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f46abd7d110>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:40): send_request_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:40): send_request_headers.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:40): send_request_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:40): send_request_body.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:40): receive_response_headers.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:43): receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'date', b'Fri, 05 Jul 2024 00:20:39 GMT'), (b'server', b'uvicorn'), (b'content-length', b'770'), (b'content-type', b'application/json'), (b'openai-processing-ms', b'3648'), (b'x-request-id', b'5ff95c21dccf4e9886162580fecff537')])
+INFO: (httpx[_send_single_request]) (2024-07-05 00:20:43): HTTP Request: POST http://0.0.0.0:8004/v1/chat/completions "HTTP/1.1 200 OK"
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:43): receive_response_body.started request=<Request [b'POST']>
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:43): receive_response_body.complete
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:43): response_closed.started
+DEBUG: (httpcore.http11[atrace]) (2024-07-05 00:20:43): response_closed.complete
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:43): close.started
+DEBUG: (httpcore.connection[atrace]) (2024-07-05 00:20:43): close.complete
+INFO: (LLM[terminate]) (2024-07-05 01:23:51): Terminating process: 15749
+INFO: (LLM[run_llm]) (2024-07-12 19:21:35): Start a new LLM process: ['python', '-m', 'llama_cpp.server', '--model', None, '--host', 'api.openai.com', '--port', '443', '--chat_format', 'chatml', '--verbose', 'False']
+ERROR: (LLM[run_llm]) (2024-07-12 19:21:35): Error: expected str, bytes or os.PathLike object, not NoneType
+ERROR: (LLM[run_llm]) (2024-07-12 19:21:35): Failed to start local LLM and unable to receive request into LLM
+INFO: (LLM[run_api]) (2024-07-12 19:21:35): Start a new API process ['uvicorn', 'llm:app', '--host', '0.0.0.0', '--port', '8003']
+INFO: (LLM[run_api]) (2024-07-12 19:21:35): PID of Started API Process: 24838
+INFO: (LLM[terminate]) (2024-07-12 19:22:06): Terminating process: 24838

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+   sodipodi:docname="design.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <script
+     xlink:href="/home/headless/project/courses/AI Summer Bootcamp 2024 (in person)/Siraj Sabihuddin/design/inkscape/design.js"
+     id="script1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.61468855"
+     inkscape:cx="396.94899"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1870"
+     inkscape:window-height="888"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect1"
+       width="50.36087"
+       height="43.473911"
+       x="43.043476"
+       y="54.665215"
+       onclick="showLayer(&quot;layer2&quot;)"
+       onmouseover="this.style.cursor=&quot;pointer&quot;; this.style.fill=&quot;#FFF000&quot;"
+       onmouseout="this.style.fill=&quot;#0000ffff&quot;" />
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect2"
+       width="51.221741"
+       height="39.169563"
+       x="65.426086"
+       y="43.473911"
+       onclick="showLayer(&quot;layer2&quot;)"
+       onmouseover="this.style.cursor=&quot;pointer&quot;; this.style.fill=&quot;#FFFF00&quot;"
+       onmouseout="this.style.fill=&quot;#0000ffff&quot;" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect1-5"
+       width="50.36087"
+       height="43.473911"
+       x="87.57708"
+       y="130.70416"
+       onclick="showLayer(&quot;layer1&quot;)"
+       onmouseover="this.style.cursor=&quot;pointer&quot;; this.style.fill=&quot;#FFF000&quot;"
+       onmouseout="this.style.fill=&quot;#000000&quot;"
+       onload="" />
+  </g>
+</svg>
