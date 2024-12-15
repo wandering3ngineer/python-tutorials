@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.5">
+<title>main API documentation</title>
+<meta name="description" content="Energy &amp; Weather Analytics (Demo)
+This code is demonstration code for analyzing some sample weather and electricity
+meter data from a particular …">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source > summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible;min-width:max-content}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+/* Collapse source docstrings */
+setTimeout(() => {
+[...document.querySelectorAll('.hljs.language-python > .hljs-string')]
+.filter(el => el.innerHTML.length > 200 && ['"""', "'''"].includes(el.innerHTML.substring(0, 3)))
+.forEach(el => {
+let d = document.createElement('details');
+d.classList.add('hljs-string');
+d.innerHTML = '<summary>"""</summary>' + el.innerHTML.substring(3);
+el.replaceWith(d);
+});
+}, 100);
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<h2 id="energy-weather-analytics-demo">Energy &amp; Weather Analytics (Demo)</h2>
+<p>This code is demonstration code for analyzing some sample weather and electricity
+meter data from a particular region in the world. The code first visualizes the
+existing data and produces html graphs. It then goes ahead and uses kmeans clustering
+to determine how meter energy consumption patterns over a year may be related to
+establish distinct clusters of meters that can be grouped together as similar.
+An html graph is used to map this data into a map and identify differences in clusters.
+It then brings weather information into the mix to determine the multivariate
+correlation (linear) between various weather parameters such as GHI, Wind,
+Irradiance, etc. and between meter energy consumption. This is then used with
+autoencoders to determine distinct possible load patterns existing among meters
+relative to weather. Highly correlated meteers would exhibit high correlation
+suggesting use of air conditioning to higher levels. </p>
+<h2 id="on-html-rendering">On Html Rendering</h2>
+<p>Note that rendering times for some of the HTML files generated could be a bit
+slow. So be patient when loading. I haven't really done any optimization for
+rendering into a web browser</p>
+<p>This code, when executed without parameters should take about a minute or
+so to fully run and will produce four sets of html graphs that can be
+viewed in a web browser:</p>
+<h2 id="on-documentation">On Documentation</h2>
+<p>Detailed API documentation is provided as an autogenerated html file called
+<strong>main.html</strong>. This is generated using the command </p>
+<pre>pdoc main --html --output-dir . --force</pre>
+<p>Additional documentation is embedded directly in the code. </p>
+<h3 id="visualization-of-energy-analytics-results">Visualization of Energy Analytics Results</h3>
+<p>There are four different visualizatons that are produced as below. Note that some
+limited conclusions can be drawn from analyzing the data. Refer below. </p>
+<ol>
+<li>
+<p><strong>graph_energy_meter.html</strong>
+This graph just graphs al the meters for all areas into a single HTML for
+viewing the relationship between meters on a month by month and area by area
+level. Good for just trying to understand some things about the data. Though
+maybe a bit overkill and thus less useful. </p>
+</li>
+<li>
+<p><strong>graph_weather_energy_month.html</strong>
+This graph contains a yearly view per graph for every meter as organized
+on an area by area basis. This is more useful than the previous graph. The
+weather parameters such as temperature, humidity are also graphed ontop of
+each graph just to provide a relative baseline for energy consumption patterns.
+Again this graph is purely to better understand and visualize the data. </p>
+</li>
+<li>
+<p><strong>graph_energy_meter_clusters.html</strong>
+This graph does some ML and takes all the meter energy data for a year
+and compares all meters to each other. The more closely clustered these
+energy values are after normalization the more likely they are part of a single
+cluster of energy consumption patterns. Optimal cluster graph is provided where
+the code automatically determines the clusters, then the meters are pinned on
+to a map and colour coded by those that have similar energy consumption patterns
+And finally distinct cluster mean energies are mapped to show how th clusters vary
+across the year in energy consumption. Meters are operating in about 5 distinct energy consumption profile patterns.
+This could suggest higher occupancy, lower energy efficiency of household or even
+which groups of houses contain richer or poorer people.
+</p>
+</li>
+<li>
+<p><strong>graph_weather_energy_meter_clusters.html</strong>
+This graph looks at the relationship of energy consumption of meters and its
+correlation with weather patterns. The first heat map shows a simple linear
+pearson correlation while the second uses MSO style linear regression and plots
+correlations. These correlations are then clustered and optimal number of clusters
+determined. Finally, the clustering technique used is autoencoding and it is
+used to seperate different meters according to how closely they correlate with
+weather. These are pinned to a map and colour coded. And clusters are also
+graphed as bar charts to show the variation in cluster correlation means. This result might be used for say, determining the type of load to be air conditioning
+(which might be highly correlated with weather or temperature) for particular households.
+Of course, we note that while there is clustering of data, clusters are not as clearly
+delineated and so different runs of the algoritm might yield different results. This
+suggests that load consumption patterns for the houses is not that distinct in the region </p>
+</li>
+</ol>
+<h2 id="running-the-code">Running The Code</h2>
+<p>TO RUN this code simply call:</p>
+<ol>
+<li>
+<p>If using conda, create python 3.11. conda environment and activate
+<br>
+<pre>conda create --name myenv python=3.11</pre>
+</p>
+</li>
+<li>
+<p>Install requrements
+<br>
+<pre>pip install -r requirements.txt</pre>
+</p>
+</li>
+<li>
+<p>Run main.py
+<br>
+<pre>python main.py</pre>
+</p>
+</li>
+<li>
+<p>To regenerate docs use
+<br>
+<pre>pdoc main --html --output-dir . --force</pre>
+</p>
+</li>
+</ol>
+<h2 id="author-license">Author &amp; License</h2>
+<p>This code was authored by Siraj Sabihuddin with last edits on Dec 15, 2024. It is released
+under GPL v2 license</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="main.graph_energy_meter"><code class="name flex">
+<span>def <span class="ident">graph_energy_meter</span></span>(<span>outputfile, data, rng=None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def graph_energy_meter(outputfile, data, rng=None):
+    &#39;&#39;&#39;
+    Provides a visualization of energy by meter id and stores it into an html file
+    named according to parameters. Note that the rendered html generated by
+    this function may take time to load. Be patient. This function really
+    is only intended to provide a method of visualizing energy and meter
+    data to better examine it. 
+
+    Parameters
+    ----------
+    outputfile: str
+        The name of the output html file for storing graphed results
+    data : list of dataframes
+        The first item in the list of data is the weather data and the second
+        is the electrical data
+    rng : list of int
+        A [start, stop] list value pair to reduce the set of data graphed to within
+        a smaller range. This is mostly to reduce the rendering time of generated
+        html file in browser. If none, then just uses the entire data
+    &#39;&#39;&#39;
+    # Grab the data
+    data_weather = data[1]
+    data_electrical = data[0]
+
+    # Extract columns where the header is a datetime object
+    data_electrical_datetimes = [col for col in data_electrical.columns if isinstance(col, datetime)]
+     
+    # Group the electrical data by region
+    data_electrical_grp = list(data_electrical.groupby(&#39;Area Num&#39;))
+
+    # Storing plots
+    col_plots = []
+
+    # Grab a subset of the data
+    if (rng):
+        data_electrical_grp_subset = data_electrical_grp[rng[0]:rng[1]]
+    else:
+        data_electrical_grp_subset = data_electrical_grp
+
+    # Iterate through the grouped data
+    for a in data_electrical_grp_subset:
+        # Store the plots for a given date
+        row_plots = []
+        
+        # Grab the area number
+        area = list(a[1][&#39;Area Num&#39;])[0]
+
+        # Iterate through datetimes
+        for d in data_electrical_datetimes:
+            # Get the date and associated power series for that date
+            date = d.strftime(&#34;%B %Y&#34;)
+            energy = a[1][d].to_numpy()
+            id = a[1][&#39;Elec Num&#39;].to_numpy().astype(str) 
+
+            # Create figure
+            p = figure(title=f&#34;{date}, Area: {area}&#34;, x_axis_label=&#39;Meter ID&#39;, y_axis_label=&#39;Energy&#39;, width=400, height=400, x_range=id)
+            p.scatter(id, energy, size=10, color=&#34;navy&#34;, alpha=0.5)
+            p.xaxis.formatter = NumeralTickFormatter(format=&#34;0&#34;)
+            p.xaxis.major_label_orientation = 90
+            p.xaxis.major_label_text_font_size = &#34;5pt&#34;
+            row_plots.append(p)
+        
+        # Create a list of plots
+        col_plots.append(row_plots)
+    
+    # Save to file
+    layout = gridplot(col_plots)  # Arrange in a single row grid
+    output_file(outputfile)
+    show(layout)</code></pre>
+</details>
+<div class="desc"><p>Provides a visualization of energy by meter id and stores it into an html file
+named according to parameters. Note that the rendered html generated by
+this function may take time to load. Be patient. This function really
+is only intended to provide a method of visualizing energy and meter
+data to better examine it. </p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>outputfile</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the output html file for storing graphed results</dd>
+<dt><strong><code>data</code></strong> :&ensp;<code>list</code> of <code>dataframes</code></dt>
+<dd>The first item in the list of data is the weather data and the second
+is the electrical data</dd>
+<dt><strong><code>rng</code></strong> :&ensp;<code>list</code> of <code>int</code></dt>
+<dd>A [start, stop] list value pair to reduce the set of data graphed to within
+a smaller range. This is mostly to reduce the rendering time of generated
+html file in browser. If none, then just uses the entire data</dd>
+</dl></div>
+</dd>
+<dt id="main.graph_energy_meter_clusters"><code class="name flex">
+<span>def <span class="ident">graph_energy_meter_clusters</span></span>(<span>outputfile, data, rng=None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def graph_energy_meter_clusters (outputfile, data, rng=None):
+    &#39;&#39;&#39;
+    This function uses the following approaches to extract meaningful
+    data about the energy relationship between meters in the data provided
+    
+    1. Uses a kmeans approach to cluster meters and extract the optimal
+       number of meter clusters via the knee of the SSE graph. The SSE
+       graph is created in an html file (left most graph)
+    2. The meters are clustered by the optimal cluster size and their
+       similarity in energy consumption pattern thus correlated. 
+    3. The meters are each pinned to an openstreetmaps view and colour
+       coded by the cluster they belong to. Added tooltip data is 
+       added for each pin and different clusters can be turned off and on
+       individually. A graph is added as a middle map graph to the same
+       html graph file as step 1.
+    4. Finally the assumed normal distribution statistics, namel the mean
+       and standard deviation are extracted and then a set of line graphs
+       mapped into the right most figure (color coded to map) are provided
+       to indicate the distinct energy consumption patterns of each cluster
+    
+    Parameters
+    ----------
+    outputfile: str
+        The name of the output html file for storing graphed results
+    data : list of dataframes
+        The first item in the list of data is the weather data and the second
+        is the electrical data
+    rng : list of int
+        A [start, stop] list value pair to reduce the set of data graphed to within
+        a smaller range. This is mostly to reduce the rendering time of generated
+        html file in browser
+    &#39;&#39;&#39;
+    # Grab the data
+    data_weather = data[1]
+    data_electrical = data[0]
+
+    ##################################################
+    # Extract the month columns and associated 
+    # meter energy data for those months
+    ##################################################
+    # Extract columns where the header is a datetime object
+    data_electrical_datetimes = [col for col in data_electrical.columns if isinstance(col, datetime)]
+
+    # Create a dataframe of Elec Num and monthly energy usage (including total)
+    # and use this to produce a correlation matrix of every meter to every other
+    # meter
+    cols = data_electrical_datetimes
+    if (rng):
+        meter_data=data_electrical.iloc[rng[0]:rng[1]].copy()
+    else:
+        meter_data=data_electrical.copy()
+    meter_data=meter_data[cols]
+
+    ##################################################
+    # Normaize meter data to perform clustering
+    ##################################################
+    # Start by normalizing the data
+    # Preprocess and scale the data
+    scaler = StandardScaler()
+    # Fit and transform the data
+    meter_data_normalized = scaler.fit_transform(meter_data)
+    # Convert the normalized data back into a DataFrame
+    meter_data_ = pd.DataFrame(meter_data_normalized, columns=meter_data.columns)
+
+    ##################################################
+    # Compute the clusters of meter energy 
+    # consumption types and determine the optimal
+    # cluster sizes 
+    ##################################################
+    # Determine the optimal number of clusters using the elbow method
+    # Finds the optimal number of clusters (k) in a dataset by running K-Means 
+    # clustering for a range of values for k and calculating Sum of Squared Errors (SSE) 
+    # or inertia for each k. Identify &#34;elbow point,&#34; where increasing k yields diminishing 
+    # returns in reducing SSE.
+    sse = []; n = 30
+    for k in range(1, n):
+        kmeans = KMeans(n_clusters=k, random_state=42)
+        kmeans.fit(meter_data_)
+        sse.append(kmeans.inertia_)
+
+    # Create the figure
+    p = figure(title=&#34;K-Means Optimal Cluster Size&#34;, x_axis_label=&#39;No. Clusters&#39;, y_axis_label=&#39;SSE&#39;, width=400, height=400)
+    p.line(list(range(1, n)), sse, line_width=2)
+    p.scatter(list(range(1, n)), sse, size=8, color=&#39;red&#39;)
+
+    # Use KneeLocator to find the elbow point
+    kneedle = KneeLocator(list(range(1, n)), sse, curve=&#39;convex&#39;, direction=&#39;decreasing&#39;)
+
+    # Get the elbow (knee) point
+    optimalk = kneedle.elbow
+
+    # Plot a vertical line for optimal k value
+    vline = Span(location=optimalk, dimension=&#39;height&#39;, line_color=&#39;gray&#39;, line_width=1)
+    p.add_layout(vline)
+
+    # Fit the KMeans model
+    # Replace with your chosen optimal number of clusters
+    kmeans = KMeans(n_clusters=optimalk, random_state=42)
+    clusters = kmeans.fit_predict(meter_data_)
+
+    # Store the cluster numbers along with the meter ids and total energy
+    # consumptions into the meter_data dataframe - we had removed some of 
+    # these values from the origiinal data, now we&#39;re adding them 
+    # back.
+    meter_data[&#39;Cluster&#39;] = clusters
+    meter_data[&#39;Elec Num&#39;] = data_electrical[&#39;Elec Num&#39;].copy()
+    meter_data[&#39;Total 19&#39;] = data_electrical[&#39;Total 19&#39;].copy()
+    meter_data[&#39;Area Name&#39;] = data_electrical[&#39;Area Name&#39;].copy()
+    meter_data[&#39;Area Num&#39;] = data_electrical[&#39;Area Num&#39;].copy()
+    meter_data[&#39;X Coordinate&#39;] = data_electrical[&#39;X Coordinate&#39;].copy()
+    meter_data[&#39;Y Coordinate&#39;] = data_electrical[&#39;Y Coordinate&#39;].copy()
+
+    ##################################################
+    # Grab the coordinate positions of meters, convert
+    # and plot onto a map
+    ##################################################
+    # Define the transformer with the appropriate EPSG codes
+    transformer = Transformer.from_crs(&#34;epsg:32636&#34;, &#34;epsg:4326&#34;, always_xy=True)
+
+    # List of coordinates extracted and converted to latitude and longitude
+    coordinates = [(i, j) for i, j in zip(meter_data[&#39;X Coordinate&#39;], meter_data[&#39;Y Coordinate&#39;])]
+    coordinates_lat_lon = [transformer.transform(x, y) for x, y in coordinates]
+
+    # Map cluster numbers to colors using Viridis256 palette
+    unique_clusters = sorted(set(clusters))
+    
+    # Define available Folium colors
+    folium_colors = [&#39;darkblue&#39;, &#39;lightgray&#39;, &#39;black&#39;, &#39;red&#39;, &#39;blue&#39;, &#39;white&#39;, 
+                    &#39;orange&#39;, &#39;darkgreen&#39;, &#39;pink&#39;, &#39;darkpurple&#39;, &#39;gray&#39;, &#39;darkred&#39;, 
+                    &#39;lightgreen&#39;, &#39;lightred&#39;, &#39;purple&#39;, &#39;cadetblue&#39;, &#39;beige&#39;, 
+                    &#39;lightblue&#39;, &#39;green&#39;]
+    # Reduce this to the number of unique colours
+    folium_colors = [folium_colors[i] for i in unique_clusters]
+
+    # Map cluster numbers to available colors
+    cluster_to_color = {cluster: folium_colors[i % len(folium_colors)] for i, cluster in enumerate(unique_clusters)}
+
+    # Create a folium map centered around the first point
+    m = folium.Map(location=coordinates_lat_lon[0], zoom_start=10, tiles=&#39;OpenStreetMap&#39;)
+
+    # Create FeatureGroups for each color
+    feature_groups = {color: folium.FeatureGroup(name=f&#39;Cluster {color}&#39;, show=True).add_to(m) for color in folium_colors}
+
+    # Add points to the map with colors based on clusters. We add a tooltip to each
+    # marker to provide further information about the particular meter in the class
+    for idx, (lat, lon) in enumerate(coordinates_lat_lon):
+        # Grab the cluster_id for the current coordinate (lat, long)
+        # Grab the meter data for the current cluster
+        # Grab the colour for the current cluster
+        cluster_id = clusters[idx]
+        meter_data_ = meter_data.iloc[idx]
+        color = cluster_to_color[cluster_id]
+
+        # Construct a tool tip to display additional details 
+        # for each location on map
+        tooltip_text = f&#34;&lt;strong&gt;Cluster ID:&lt;/strong&gt; {cluster_id}&lt;br&gt; \
+                         &lt;strong&gt;Area Name:&lt;/strong&gt; {meter_data_[&#39;Area Name&#39;]}&lt;br&gt; \
+                         &lt;strong&gt;Elec Num:&lt;/strong&gt; {meter_data_[&#39;Elec Num&#39;]}&lt;br&gt; \
+                         &lt;strong&gt;Coordinates:&lt;/strong&gt; ({lat:.4f}, {lon:.4f})&lt;br&gt; \
+                         &lt;strong&gt;Energy:&lt;/strong&gt; {meter_data_[&#39;Total 19&#39;]}&#34;
+        
+        # Add a location marker on the map for the current (lat, long) position
+        folium.Marker([lat, lon], icon=folium.Icon(color=color), tooltip=tooltip_text).add_to(feature_groups[color])
+
+    # Add LayerControl to toggle visibility of FeatureGroups
+    folium.LayerControl().add_to(m)
+
+    # Save the folium map to a temporary HTML file
+    temp_map_file = tempfile.NamedTemporaryFile(delete=False, suffix=&#39;.html&#39;)
+    m.save(temp_map_file.name)
+
+    # Create a Bokeh Div to display the folium map
+    map_div = Div(text=f&#39;&lt;iframe src=&#34;{temp_map_file.name}&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;&lt;/iframe&gt; \
+                         &lt;br&gt;&lt;h3 align=&#34;center&#34; style=&#34;font-size:14px&#34;&gt;&lt;b&gt;Meters Clustered by Similarity in Energy Consumption&lt;/b&gt;&lt;/h3&gt;&#39;)
+
+    ##################################################
+    # Plot cluster meter energy means and standard 
+    # deviations for each cluster in map
+    ##################################################
+    # Extract columns where the header is a datetime object
+    data_electrical_datetimes = [col for col in data_electrical.columns if isinstance(col, datetime)]
+
+    # Group meter data by Clusters
+    meter_data_cluster_grp = list(meter_data.groupby(&#39;Cluster&#39;))
+
+    # Now we will graph the meter data for this cluster as a set of 
+    # distinctly coloured lines on a single graph
+    cp = figure(title=f&#34;Meter Mean Energy per cluster&#34;, x_axis_label=&#39;Energy&#39;, y_axis_label=&#39;Date&#39;, width=400, height=400, y_range=(0, 20000))    
+    cp.xaxis.formatter = DatetimeTickFormatter(months=&#34;%b %Y&#34;)
+    cp.xaxis.major_label_orientation = 90
+
+    # Iterate through each cluster&#39;s meter data. 
+    for i in meter_data_cluster_grp:
+        # Get the cluster id for the current dataframe
+        cluster_id = i[0]
+
+        # Convert the dates into a numpy array for graphing and
+        # extract the energies associated with the dates and convert to numpy for graphing
+        dates = np.array(data_electrical_datetimes)
+        energies=i[1][data_electrical_datetimes].to_numpy()
+        energies_mean = i[1][data_electrical_datetimes].mean(axis=0).to_numpy()
+        energies_std = i[1][data_electrical_datetimes].std(axis=0).to_numpy()
+
+        # Create a ColumnDataSource
+        source = ColumnDataSource(data=dict(
+            dates=dates,
+            mean=energies_mean,
+            upper=energies_mean + energies_std,
+            lower=energies_mean - energies_std
+        ))
+
+        # Graph each of the line means and add error bars
+        cp.line(&#39;dates&#39;, &#39;mean&#39;, source=source, line_width=2, color=folium_colors[cluster_id], legend_label=f&#34;Cluster {cluster_id}, {folium_colors[cluster_id]}&#34;)
+        cp.add_layout(Whisker(source=source, base=&#39;dates&#39;, upper=&#39;upper&#39;, lower=&#39;lower&#39;, line_color=folium_colors[cluster_id], line_alpha=0.4,upper_head=None, lower_head=None))
+    
+    # Adjust legend font sizing
+    # Reduce spacing between legend items
+    # Reduce padding around the legend
+    # Reduce the height of the legend glyphs
+    cp.legend.label_text_font_size = &#39;7pt&#39;
+    cp.legend.spacing = 0  
+    cp.legend.padding = 1
+    cp.legend.glyph_height = 7  
+
+    ###########################################
+    # Store the data in an html graph file
+    ###########################################
+    # Save to file after arranging into a grid layout
+    layout = gridplot([[p, map_div, cp]]) 
+    output_file(outputfile)
+    show(layout)</code></pre>
+</details>
+<div class="desc"><p>This function uses the following approaches to extract meaningful
+data about the energy relationship between meters in the data provided</p>
+<ol>
+<li>Uses a kmeans approach to cluster meters and extract the optimal
+number of meter clusters via the knee of the SSE graph. The SSE
+graph is created in an html file (left most graph)</li>
+<li>The meters are clustered by the optimal cluster size and their
+similarity in energy consumption pattern thus correlated. </li>
+<li>The meters are each pinned to an openstreetmaps view and colour
+coded by the cluster they belong to. Added tooltip data is
+added for each pin and different clusters can be turned off and on
+individually. A graph is added as a middle map graph to the same
+html graph file as step 1.</li>
+<li>Finally the assumed normal distribution statistics, namel the mean
+and standard deviation are extracted and then a set of line graphs
+mapped into the right most figure (color coded to map) are provided
+to indicate the distinct energy consumption patterns of each cluster</li>
+</ol>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>outputfile</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the output html file for storing graphed results</dd>
+<dt><strong><code>data</code></strong> :&ensp;<code>list</code> of <code>dataframes</code></dt>
+<dd>The first item in the list of data is the weather data and the second
+is the electrical data</dd>
+<dt><strong><code>rng</code></strong> :&ensp;<code>list</code> of <code>int</code></dt>
+<dd>A [start, stop] list value pair to reduce the set of data graphed to within
+a smaller range. This is mostly to reduce the rendering time of generated
+html file in browser</dd>
+</dl></div>
+</dd>
+<dt id="main.graph_energy_month"><code class="name flex">
+<span>def <span class="ident">graph_energy_month</span></span>(<span>outputfile, data, rng=None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def graph_energy_month(outputfile, data, rng=None):
+    &#39;&#39;&#39;
+    Provides a visualization of energy by month of year for every area and 
+    every meter and stores it into an html file named according to parameters
+    The right hand axis graph the monthly average weather data while the left
+    hand axis graphs the monthly energy data. These are arranged into rows
+    organized by Area Num. A single row contains all meters in the area. Note 
+    that this function simply provides a method of visualization to better
+    understand the data. 
+
+    Parameters
+    ----------
+    outputfile: str
+        The name of the output html file for storing graphed results
+    data : list of dataframes
+        The first item in the list of data is the weather data and the second
+        is the electrical data
+    rng : list of int
+        A [start, stop] list value pair to reduce the set of data graphed to within
+        a smaller range. This is mostly to reduce the rendering time of generated
+        html file in browser. If none then use entire data set
+    &#39;&#39;&#39;
+    # Grab the data
+    data_weather = data[1]
+    data_electrical = data[0]
+
+    # Extract columns where the header is a datetime object
+    data_electrical_datetimes = [col for col in data_electrical.columns if isinstance(col, datetime)]
+    dates = np.array(data_electrical_datetimes)
+
+    # Group the electrical data by meterid
+    data_electrical_grp = list(data_electrical.groupby(&#39;Area Num&#39;))
+
+    # Now grab the weather data for the year and accumulate it by month to produce an 
+    # average monthly irradiances, temperatures, etc as a baseline for comparison of electrical power production data.
+    irradiances = np.array(data_weather.groupby(&#39;Month&#39;)[&#39;GHI&#39;].mean())
+    temperatures = np.array(data_weather.groupby(&#39;Month&#39;)[&#39;Temperature&#39;].mean())
+    precipitations = np.array(data_weather.groupby(&#39;Month&#39;)[&#39;Precipitable Water&#39;].mean())
+    humidities = np.array(data_weather.groupby(&#39;Month&#39;)[&#39;Relative Humidity&#39;].mean())
+
+    # Storing plots
+    col_plots = []
+
+    # Grab a subset of the data
+    if (rng):
+        data_electrical_grp_subset = data_electrical_grp[rng[0]:rng[1]]
+    else:
+        data_electrical_grp_subset = data_electrical_grp
+
+    # Iterate through the grouped data. Each group 
+    # should contain a dataframe for a particular Area Num.
+    for a in data_electrical_grp_subset:
+        # Store the plots for a given date
+        row_plots = []
+
+        # Grab the area number
+        area = list(a[1][&#39;Area Num&#39;])[0]
+
+        # Grab the meterids for the particular area
+        ids = a[1][&#39;Elec Num&#39;].to_numpy()
+
+        # Iterate through datetimes
+        for id in ids:
+            # Get the date and associated power series for that date
+            meter_data = a[1][a[1][&#39;Elec Num&#39;] == id]
+
+            # Extract the energy values for the given ids
+            energies = meter_data[data_electrical_datetimes].to_numpy()[0]
+
+            ###################################
+            # Creates a graph of dates v.s
+            # energy values for every meter
+            # in a given Area Num. 
+            ###################################
+            # Create figure with primary axis for dates vs energies
+            p = figure(title=f&#34;Area: {area}, MeterID: {id}&#34;, x_axis_label=&#39;Date&#39;, y_axis_label=&#39;Energy&#39;, width=700, height=400)
+            p.scatter(dates, energies, size=10, color=&#34;black&#34;, alpha=1)
+
+            ###################################
+            # Adds additional vertical axis
+            # and graph for Irradiance from
+            # weather data
+            ###################################
+            # Add a secondary y-axis for irradiance
+            p.extra_y_ranges = {&#34;irradiance&#34;: Range1d(start=0, end=600)}
+            irradiance_axis = LinearAxis(y_range_name=&#34;irradiance&#34;, axis_label=&#34;Irradiance&#34;, major_label_text_color=&#34;orange&#34;, major_tick_line_color=&#34;orange&#34;, axis_line_color = &#34;orange&#34;, axis_label_text_color=&#34;orange&#34;)
+            p.add_layout(irradiance_axis, &#39;right&#39;)
+
+            # Plot irradiance data using the secondary y-axis
+            p.line(dates, irradiances, line_width=2, color=&#34;orange&#34;, alpha=0.7, y_range_name=&#34;irradiance&#34;)
+
+            ###################################
+            # Adds additional vertical axis
+            # and graph for temperature from
+            # weather data
+            ###################################
+            # Add a third y-axis for temperature
+            p.extra_y_ranges[&#34;temperature&#34;] = Range1d(start=0, end=40)
+            temperature_axis = LinearAxis(y_range_name=&#34;temperature&#34;, axis_label=&#34;Temperature&#34;, major_label_text_color=&#34;red&#34;, major_tick_line_color=&#34;red&#34;, axis_line_color = &#34;red&#34;, axis_label_text_color=&#34;red&#34;)
+
+            # Offset the temperature axis to avoid overlap
+            p.add_layout(temperature_axis, &#39;right&#39;)
+            temperature_axis.ticker.desired_num_ticks = 5
+
+            # Plot temperature data using the third y-axis
+            p.line(dates, temperatures, line_width=2, color=&#34;red&#34;, alpha=0.7, y_range_name=&#34;temperature&#34;)
+
+            ###################################
+            # Adds additional vertical axis
+            # and graph for Precipitation from
+            # weather data
+            ###################################
+            # Add a fourth y-axis for precipitation
+            p.extra_y_ranges[&#34;precipitations&#34;] = Range1d(start=0, end=3)
+            precipitation_axis = LinearAxis(y_range_name=&#34;precipitations&#34;, axis_label=&#34;Precipitable Water&#34;, major_label_text_color=&#34;blue&#34;, major_tick_line_color=&#34;blue&#34;, axis_line_color = &#34;blue&#34;, axis_label_text_color=&#34;blue&#34;)
+
+            # Offset the precipitation axis to avoid overlap
+            p.add_layout(precipitation_axis, &#39;right&#39;)
+            precipitation_axis.ticker.desired_num_ticks = 5
+
+            # Plot temperature data using the third y-axis
+            p.line(dates, precipitations, line_width=2, color=&#34;blue&#34;, alpha=0.7, y_range_name=&#34;precipitations&#34;)
+
+            ###################################
+            # Adds additional vertical axis
+            # and graph for Humidity from
+            # weather data
+            ###################################
+            # Add a fifth y-axis for humidities
+            p.extra_y_ranges[&#34;humidities&#34;] = Range1d(start=0, end=100)
+            humidities_axis = LinearAxis(y_range_name=&#34;humidities&#34;, axis_label=&#34;Relative Humidity&#34;, major_label_text_color=&#34;green&#34;, major_tick_line_color=&#34;green&#34;, axis_line_color = &#34;green&#34;, axis_label_text_color=&#34;green&#34;)
+
+            # Offset the precipitation axis to avoid overlap
+            p.add_layout(humidities_axis, &#39;right&#39;)
+            humidities_axis.ticker.desired_num_ticks = 5
+
+            # Plot temperature data using the third y-axis
+            p.line(dates, humidities, line_width=2, color=&#34;green&#34;, alpha=0.7, y_range_name=&#34;humidities&#34;)
+
+
+            p.xaxis.formatter = DatetimeTickFormatter(months=&#34;%b %Y&#34;)
+            p.xaxis.major_label_orientation = 90
+            row_plots.append(p)
+        
+        # Create a list of plots
+        col_plots.append(row_plots)
+    
+    # Save to file
+    layout = gridplot(col_plots)  # Arrange in a single row grid
+    output_file(outputfile)
+    show(layout)</code></pre>
+</details>
+<div class="desc"><p>Provides a visualization of energy by month of year for every area and
+every meter and stores it into an html file named according to parameters
+The right hand axis graph the monthly average weather data while the left
+hand axis graphs the monthly energy data. These are arranged into rows
+organized by Area Num. A single row contains all meters in the area. Note
+that this function simply provides a method of visualization to better
+understand the data. </p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>outputfile</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the output html file for storing graphed results</dd>
+<dt><strong><code>data</code></strong> :&ensp;<code>list</code> of <code>dataframes</code></dt>
+<dd>The first item in the list of data is the weather data and the second
+is the electrical data</dd>
+<dt><strong><code>rng</code></strong> :&ensp;<code>list</code> of <code>int</code></dt>
+<dd>A [start, stop] list value pair to reduce the set of data graphed to within
+a smaller range. This is mostly to reduce the rendering time of generated
+html file in browser. If none then use entire data set</dd>
+</dl></div>
+</dd>
+<dt id="main.graph_weather_energy_meter_clusters"><code class="name flex">
+<span>def <span class="ident">graph_weather_energy_meter_clusters</span></span>(<span>outputfile, data, rng=None)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def graph_weather_energy_meter_clusters(outputfile, data, rng=None):
+    &#39;&#39;&#39;
+    Grabs the various weather parameters and grab those meters that
+    are most highly correlated with weather patterns and separate them
+    from those meters that have lower correlations. Use pearson correlation
+    and linear regression to create correlations and then custer these with
+    kmeans and autoencoders to determine the level of correlation to weather
+    patterns for every meter. Graph these results and place pins on a map
+    as well. Note that autoencoder can be a bit stochastic and can lead 
+    to differing results for clusters on subsequent runs. It would be 
+    good to run more than once if clusters end up as single clusters.
+    Really, I&#39;m just using autoencoders for fun. In fact, standard kmeans
+    will probably respond just as well and more deterministically.    
+
+    Parameters
+    ----------
+    outputfile: str
+        The name of the output html file for storing graphed results
+    data : list of dataframes
+        The first item in the list of data is the weather data and the second
+        is the electrical data
+    rng : list of int
+        A [start, stop] list value pair to reduce the set of data graphed to within
+        a smaller range. This is mostly to reduce the rendering time of generated
+        html file in browser
+    &#39;&#39;&#39;
+    # Grab the data
+    data_weather = data[1]
+    data_electrical = data[0]
+
+    # Now grab the weather data for the year and accumulate it by month to produce an 
+    # average monthly irradiances, temperatures, etc as a baseline for comparison of electrical power production data.
+    # Note that I assume a normal distribution. 
+    irradiances = data_weather.groupby(&#39;Month&#39;)[&#39;GHI&#39;].mean()
+    albedos = data_weather.groupby(&#39;Month&#39;)[&#39;Surface Albedo&#39;].mean()
+    temperatures = data_weather.groupby(&#39;Month&#39;)[&#39;Temperature&#39;].mean()
+    precipitations = data_weather.groupby(&#39;Month&#39;)[&#39;Precipitable Water&#39;].mean()
+    humidities = data_weather.groupby(&#39;Month&#39;)[&#39;Relative Humidity&#39;].mean()
+    pressure = data_weather.groupby(&#39;Month&#39;)[&#39;Pressure&#39;].mean()
+    wind_direction = data_weather.groupby(&#39;Month&#39;)[&#39;Wind Direction&#39;].mean()
+    wind_speed = data_weather.groupby(&#39;Month&#39;)[&#39;Wind Speed&#39;].mean()
+    
+    # Extract columns pertaining to the dates (months) for the available eneryg data
+    datetimes = [col for col in data_electrical.columns if isinstance(col, datetime)]
+
+    # Create a dataframe containing the monthly meter data for the datetimes extracted
+    # and the months extracted for the weather data. 
+    if (rng):
+        meter_data=data_electrical.iloc[rng[0]:rng[1]].copy()
+    else:
+        meter_data=data_electrical.copy()
+    meter_ids = meter_data[&#39;Elec Num&#39;]
+    meter_data=meter_data[datetimes]
+    meter_data[&#39;Elec Num&#39;] = meter_ids.copy()
+    meter_data.set_index(&#39;Elec Num&#39;, inplace=True)
+
+    # Transpose the meter_data so that the index is setup as datetimes
+    meter_data = meter_data.T
+    meter_data[&#39;datetimes&#39;] = datetimes.copy()
+    meter_data.set_index(&#39;datetimes&#39;, inplace=True)
+
+    # Reconstruct the data frame. 
+    weather_data = pd.DataFrame({
+            &#39;GHI&#39; : irradiances,
+            &#39;Surface Albedo&#39; : albedos,
+            &#39;Temperature&#39; : temperatures,
+            &#39;Precipitable Water&#39; : precipitations,
+            &#39;Relative Humidity&#39; : humidities, 
+            &#39;Pressure&#39; : pressure,
+            &#39;Wind_direction&#39; : wind_direction,
+            &#39;Wind_speed&#39; : wind_speed,
+         })
+
+    # replace the index of the weather data (i.e the month column)
+    # with datetimes extracted from meter data
+    weather_data[&#39;datetimes&#39;] = datetimes.copy()
+    weather_data.set_index(&#39;datetimes&#39;, inplace=True)
+
+    ####################################################
+    # Does simple linear correlation between weather
+    # parameters and energy profiles of each meter
+    ####################################################
+    # Loop over each weather parameter and compute a correlation
+    # matrix for it with meter_data
+    correlations0 = pd.DataFrame(columns=meter_data.columns)
+
+    for col in meter_data.columns:
+        # Calculate Pearson correlation of each column with the target column
+        # note that this assumes that there is a linear relationship without lag 
+        # between the weather parameters on a monthly basis and energy production
+        # This will perform poorly if this is not the case. 
+        correlation = weather_data.corrwith(meter_data[col])
+        correlations0[col]=correlation
+
+    # Convert the correlation matrix into a numpy 2d matrix
+    corr = correlations0.to_numpy()
+    nrows, ncols = corr.shape
+
+    # Create a figure
+    p0 = figure(title=&#34;Pearson (linear) Correlation Meter Energy v.s. Weather Params&#34;, x_axis_label=&#39;Meter ID&#39;, y_axis_label=&#39;Weather Param&#39;, x_range=(0, ncols), y_range=(0, nrows), 
+            width=600, height=400)
+
+    # Create a color mapper
+    mapper = LinearColorMapper(palette=RdYlGn[11], low=corr.min(), high=corr.max())
+
+    # Use image to display the matrix
+    p0.image(image=[corr], x=0, y=0, dw=ncols, dh=nrows, color_mapper=mapper)
+
+    # Add color bar
+    color_bar = ColorBar(color_mapper=mapper, location=(0, 0))
+    p0.add_layout(color_bar, &#39;right&#39;)
+
+    # Adjust ticker location to be centre of grid
+    p0.xaxis.ticker = [i + 0.5 for i in range(ncols)]
+    p0.yaxis.ticker = [i + 0.5 for i in range(nrows)]  
+
+    # Remove xaxis ticks since we have meter ids here that really
+    # don&#39;t provide any meaningful information too the user beyond
+    # that they are meter ids. Also hide any numbers. s
+    p0.xaxis.minor_tick_line_color = None
+    p0.xaxis.major_tick_line_color = None
+    p0.xaxis.major_label_text_font_size = &#39;0pt&#39;
+
+    # Replace the numerical values on the xaxis and yaxis with labels. Note 
+    # that this is relatively easy for the yaxis it is harder for the 
+    # xaxis since there is 
+    p0.yaxis.major_label_overrides = {i + 0.5: correlations0.index[i] for i in range(nrows)}
+    
+    ####################################################
+    # Do a more sophisticated approach to correlate
+    # to a single measure using all weather parameters
+    # collectively with meter using Multiple Linear 
+    # Regression (one dependent variable)
+    ####################################################
+    # Iterate over each meter to perform regression
+    r_squared = []
+    for meter in meter_data.columns:
+        # Define the dependent variable (energy meter data)
+        y = meter_data[meter]
+
+        # Define independent variables (weather data)
+        X = weather_data
+
+        # Add a constant to the model (intercept)
+        X = sm.add_constant(X)
+
+        # Fit the regression model
+        model = sm.OLS(y, X).fit()
+
+        # Get the R-squared value
+        r_squared.append((model.rsquared, meter))
+
+    # Grab the lists
+    correlations1, meters  = zip(*r_squared)
+
+    # Convert the meter ids into strings
+    meters_str = [str(i) for i in meters] 
+
+    # Prepare data for Bokeh
+    source = ColumnDataSource(data=dict(
+        meters_str=meters_str, 
+        correlations1=correlations1
+    ))
+
+    # Create a figure
+    p1 = figure(title=&#34;Multiple Linear Regression correlation of Energy of every Meter ID v.s. Weather Params&#34;, x_axis_label=&#39;Meter ID&#39;, y_axis_label=&#39;R-Squared Values&#39;, x_range=meters_str, width=600, height=400)
+    p1.scatter(x=&#39;meters_str&#39;, y=&#39;correlations1&#39;, width=0.9, source=source)
+
+    # Adjust x labels orientation and size
+    # and remove tick marks
+    p1.xaxis.major_label_orientation = 90
+    p1.xaxis.major_label_text_font_size = &#34;5pt&#34;
+    p1.xgrid.grid_line_color = None
+    p1.xaxis.minor_tick_line_color = None
+    p1.xaxis.major_tick_line_color = None
+    
+    # Label axis titles.
+    p1.xaxis.axis_label = &#34;Meter ID&#34;
+    p1.yaxis.axis_label = &#34;R-squared Value&#34;
+
+    ###########################################
+    # Use k-means to figure out the optimal
+    # number of clusters. 
+    ###########################################
+    # Scale the correlation1 values obtained from linear regression
+    scaler = StandardScaler()
+    correlations1_scaled = scaler.fit_transform(np.array(correlations1).reshape(-1, 1))
+
+    # Determine the optimal number of clusters using the elbow method
+    # Finds the optimal number of clusters (k) in a dataset by running K-Means 
+    # clustering for a range of values for k and calculating Sum of Squared Errors (SSE) 
+    # or inertia for each k. Identify &#34;elbow point,&#34; where increasing k yields diminishing 
+    # returns in reducing SSE.
+    sse = []; n = 30
+    for k in range(1, n):
+        kmeans = KMeans(n_clusters=k, random_state=42)
+        kmeans.fit(correlations1_scaled)
+        sse.append(kmeans.inertia_)
+
+    # Create the figure
+    p2 = figure(title=&#34;K-Means Optimal Cluster Size&#34;, x_axis_label=&#39;No. Clusters&#39;, y_axis_label=&#39;SSE&#39;, width=600, height=400)
+    p2.line(list(range(1, n)), sse, line_width=2)
+    p2.scatter(list(range(1, n)), sse, size=8, color=&#39;red&#39;)
+
+    # Use KneeLocator to find the elbow point
+    kneedle = KneeLocator(list(range(1, n)), sse, curve=&#39;convex&#39;, direction=&#39;decreasing&#39;)
+
+    # Get the elbow (knee) point
+    optimalk = kneedle.elbow
+
+    # Plot a vertical line for optimal k value
+    vline = Span(location=optimalk, dimension=&#39;height&#39;, line_color=&#39;gray&#39;, line_width=1)
+    p2.add_layout(vline)
+
+    ###########################################
+    # Use an autoencoder approach to clustering
+    # of r-square values to determine distinct
+    # profiles of energy data from meters as
+    # they do / don&#39;t correlate to weather data
+    ###########################################
+    # Define the autoencoder model
+    # Using a 1D latent space for simplicity
+    input_dim = correlations1_scaled.shape[1]
+    encoding_dim = 1 
+
+    # Encoder &amp; Decoder
+    input_layer = Input(shape=(input_dim,))
+    encoded = Dense(encoding_dim, activation=&#39;relu&#39;)(input_layer)
+    decoded = Dense(input_dim, activation=&#39;sigmoid&#39;)(encoded)
+
+    # Define the autoencoder, train the autoencoder, extract the encoder model
+    autoencoder = Model(inputs=input_layer, outputs=decoded)
+    autoencoder.compile(optimizer=&#39;adam&#39;, loss=&#39;mse&#39;)
+    autoencoder.fit(correlations1_scaled, correlations1_scaled, epochs=50, batch_size=16, shuffle=True, verbose=0)
+    encoder = Model(inputs=input_layer, outputs=encoded)
+    encoded_data = encoder.predict(correlations1_scaled)
+
+    # Perform K-Means clustering on the encoded data
+    kmeans = KMeans(n_clusters=optimalk)
+    clusters = kmeans.fit_predict(encoded_data)
+
+    ##################################################
+    # Grab the coordinate positions of meters, convert
+    # and plot onto a map
+    ##################################################
+    # Define the transformer with the appropriate EPSG codes
+    transformer = Transformer.from_crs(&#34;epsg:32636&#34;, &#34;epsg:4326&#34;, always_xy=True)
+
+    # Store the cluster numbers along with the meter ids and total energy
+    # consumptions into the meter_data dataframe - we had removed some of 
+    # these values from the origiinal data, now we&#39;re adding them 
+    # back.
+    meter_data = meter_data.T.copy()
+    meter_data[&#39;Cluster&#39;] = clusters
+    meter_data[&#39;Correlation&#39;] = list(correlations1)
+    meter_data[&#39;Elec Num&#39;] = list(data_electrical[&#39;Elec Num&#39;])
+    meter_data[&#39;Total 19&#39;] = list(data_electrical[&#39;Total 19&#39;])
+    meter_data[&#39;Area Name&#39;] = list(data_electrical[&#39;Area Name&#39;])
+    meter_data[&#39;Area Num&#39;] = list(data_electrical[&#39;Area Num&#39;])
+    meter_data[&#39;X Coordinate&#39;] = list(data_electrical[&#39;X Coordinate&#39;])
+    meter_data[&#39;Y Coordinate&#39;] = list(data_electrical[&#39;Y Coordinate&#39;])
+
+    # List of coordinates extracted and converted to latitude and longitude
+    coordinates = [(i, j) for i, j in zip(meter_data[&#39;X Coordinate&#39;], meter_data[&#39;Y Coordinate&#39;])]
+    coordinates_lat_lon = [transformer.transform(x, y) for x, y in coordinates]
+
+    # Grab the unique cluster numbers / ids
+    unique_clusters = sorted(set(clusters))
+    
+    # Define available Folium colors
+    folium_colors = [&#39;darkblue&#39;, &#39;lightgray&#39;, &#39;black&#39;, &#39;red&#39;, &#39;blue&#39;, &#39;white&#39;, 
+                    &#39;orange&#39;, &#39;darkgreen&#39;, &#39;pink&#39;, &#39;darkpurple&#39;, &#39;gray&#39;, &#39;darkred&#39;, 
+                    &#39;lightgreen&#39;, &#39;lightred&#39;, &#39;purple&#39;, &#39;cadetblue&#39;, &#39;beige&#39;, 
+                    &#39;lightblue&#39;, &#39;green&#39;]
+    # Reduce this to the number of unique colours
+    folium_colors = [folium_colors[i] for i in unique_clusters]
+
+    # Map cluster numbers to available colors
+    cluster_to_color = {cluster: folium_colors[i % len(folium_colors)] for i, cluster in enumerate(unique_clusters)}
+
+    # Create a folium map centered around the first point
+    m = folium.Map(location=coordinates_lat_lon[0], zoom_start=10, tiles=&#39;OpenStreetMap&#39;)
+
+    # Create FeatureGroups for each color
+    feature_groups = {color: folium.FeatureGroup(name=f&#39;Cluster {color}&#39;, show=True).add_to(m) for color in folium_colors}
+
+    # Add points to the map with colors based on clusters. We add a tooltip to each
+    # marker to provide further information about the particular meter in the class
+    for idx, (lat, lon) in enumerate(coordinates_lat_lon):
+        # Grab the cluster_id for the current coordinate (lat, long)
+        # Grab the meter data for the current cluster
+        # Grab the colour for the current cluster
+        cluster_id = clusters[idx]
+        meter_data_ = meter_data.iloc[idx]
+        color = cluster_to_color[cluster_id]
+
+        # Construct a tool tip to display additional details 
+        # for each location on map
+        tooltip_text = f&#34;&lt;strong&gt;Cluster ID:&lt;/strong&gt; {cluster_id}&lt;br&gt; \
+                         &lt;strong&gt;Area Name:&lt;/strong&gt; {meter_data_[&#39;Area Name&#39;]}&lt;br&gt; \
+                         &lt;strong&gt;Elec Num:&lt;/strong&gt; {meter_data_[&#39;Elec Num&#39;]}&lt;br&gt; \
+                         &lt;strong&gt;Coordinates:&lt;/strong&gt; ({lat:.4f}, {lon:.4f})&lt;br&gt; \
+                         &lt;strong&gt;Energy:&lt;/strong&gt; {meter_data_[&#39;Total 19&#39;]}&lt;br&gt; \
+                         &lt;strong&gt;Correlation:&lt;/strong&gt; {meter_data_[&#39;Correlation&#39;]}&#34;
+        
+        # Add a location marker on the map for the current (lat, long) position
+        folium.Marker([lat, lon], icon=folium.Icon(color=color), tooltip=tooltip_text).add_to(feature_groups[color])
+
+    # Add LayerControl to toggle visibility of FeatureGroups
+    folium.LayerControl().add_to(m)
+
+    # Save the folium map to a temporary HTML file
+    temp_map_file = tempfile.NamedTemporaryFile(delete=False, suffix=&#39;.html&#39;)
+    m.save(temp_map_file.name)
+
+    # Create a Bokeh Div to display the folium map
+    p3 = Div(text=f&#39;&lt;iframe src=&#34;{temp_map_file.name}&#34; width=&#34;600&#34; height=&#34;400&#34;&gt;&lt;/iframe&gt; \
+                         &lt;br&gt;&lt;h3 align=&#34;center&#34; style=&#34;font-size:14px&#34;&gt;&lt;b&gt;Meters Clustered by Correlation to Weather Params&lt;/b&gt;&lt;/h3&gt;&#39;)
+
+
+    ##################################################
+    # Plot cluster meter energy means and standard 
+    # deviations for each cluster in map
+    ##################################################
+    # Extract columns where the header is a datetime object
+    data_electrical_datetimes = [col for col in data_electrical.columns if isinstance(col, datetime)]
+
+    # Group meter data by Clusters
+    meter_data_cluster_grp = list(meter_data.groupby(&#39;Cluster&#39;))
+
+    # Iterate through each cluster&#39;s meter data.
+    cluster_ids = []
+    correlations_mean = []
+    correlations_std = [] 
+    for i in meter_data_cluster_grp:
+        # Get the cluster id for the current dataframe
+        cluster_ids.append(i[0])
+
+        # Convert the dates into a numpy array for graphing and
+        # extract the correlations associated with the dates and convert to numpy for graphing
+        correlations_mean.append((i[1][&#39;Correlation&#39;]).to_numpy().mean())
+        correlations_std.append((i[1][&#39;Correlation&#39;]).to_numpy().std())
+
+    # Create a ColumnDataSource
+    source = ColumnDataSource(data=dict(
+        cluster_ids=[f&#34;Cluster {i}&#34; for i in cluster_ids],
+        correlations_mean=np.array(correlations_mean),
+        upper=np.array(correlations_mean) + np.array(correlations_std),
+        lower=np.array(correlations_mean) - np.array(correlations_std),
+        colors=folium_colors
+    ))
+
+    # Now we will graph the meter data for this cluster as a set of 
+    # distinctly coloured lines on a single graph
+    p4 = figure(title=f&#34;Meter Mean Weather Correlation per cluster&#34;, x_axis_label=&#39;Cluster ID&#39;, y_axis_label=&#39;Weather R-Squared Correlation&#39;, 
+        y_range=(0, 1), x_range=[f&#34;Cluster {i}&#34; for i in cluster_ids], width=600, height=400)    
+
+    # Graph each of the line means and add error bars
+    p4.vbar(x=&#39;cluster_ids&#39;, top=&#39;correlations_mean&#39;, width=0.9, source=source, line_color=&#39;black&#39;, fill_color=&#39;colors&#39;, legend_field=&#34;cluster_ids&#34;)
+    p4.add_layout(Whisker(source=source, base=&#34;correlations_mean&#34;, upper=&#34;upper&#34;, lower=&#34;lower&#34;, line_color = &#39;colors&#39;, upper_head=None, lower_head=None))
+
+    ###########################################
+    # Store the data in an html graph file
+    ###########################################
+    # Save to file after arranging into a grid layout
+    layout = gridplot([[p0, p1, p2],[p3, p4, None]]) 
+    output_file(outputfile)
+    show(layout)</code></pre>
+</details>
+<div class="desc"><p>Grabs the various weather parameters and grab those meters that
+are most highly correlated with weather patterns and separate them
+from those meters that have lower correlations. Use pearson correlation
+and linear regression to create correlations and then custer these with
+kmeans and autoencoders to determine the level of correlation to weather
+patterns for every meter. Graph these results and place pins on a map
+as well. Note that autoencoder can be a bit stochastic and can lead
+to differing results for clusters on subsequent runs. It would be
+good to run more than once if clusters end up as single clusters.
+Really, I'm just using autoencoders for fun. In fact, standard kmeans
+will probably respond just as well and more deterministically.
+</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>outputfile</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the output html file for storing graphed results</dd>
+<dt><strong><code>data</code></strong> :&ensp;<code>list</code> of <code>dataframes</code></dt>
+<dd>The first item in the list of data is the weather data and the second
+is the electrical data</dd>
+<dt><strong><code>rng</code></strong> :&ensp;<code>list</code> of <code>int</code></dt>
+<dd>A [start, stop] list value pair to reduce the set of data graphed to within
+a smaller range. This is mostly to reduce the rendering time of generated
+html file in browser</dd>
+</dl></div>
+</dd>
+<dt id="main.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main():
+    &#39;&#39;&#39;
+    The main program run thread. 
+    &#39;&#39;&#39;
+    # Load the excel data
+    files = [&#39;./electricity.xlsx&#39;, &#39;./weather.xlsx&#39;]
+    data = read(files)
+
+    # Graph the data
+    graph_energy_meter(&#39;graph_energy_meter.html&#39;, data)
+    graph_energy_month(&#39;graph_weather_energy_month.html&#39;, data)
+    graph_energy_meter_clusters(&#39;graph_energy_meter_clusters.html&#39;,data)
+    graph_weather_energy_meter_clusters(&#39;graph_weather_energy_meter_clusters.html&#39;, data)</code></pre>
+</details>
+<div class="desc"><p>The main program run thread.</p></div>
+</dd>
+<dt id="main.read"><code class="name flex">
+<span>def <span class="ident">read</span></span>(<span>files)</span>
+</code></dt>
+<dd>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read(files):
+    &#39;&#39;&#39;
+    Read the excel data. 
+
+    Parameters
+    ----------
+    files : list of str
+        A list of string filepaths from which to extract data. The file
+        paths should be in xlsx format at the moment. 
+
+    Returns
+    -------
+    data : list of dataframes
+        Each item in the list is a single dataframe in the same order
+        as the input file names. 
+    &#39;&#39;&#39;
+    # Read the xlsx file into a DataFrame
+    data = [pd.read_excel(i) for i in files]
+
+    # The data
+    return data</code></pre>
+</details>
+<div class="desc"><p>Read the excel data. </p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>files</code></strong> :&ensp;<code>list</code> of <code>str</code></dt>
+<dd>A list of string filepaths from which to extract data. The file
+paths should be in xlsx format at the moment.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>data</code></strong> :&ensp;<code>list</code> of <code>dataframes</code></dt>
+<dd>Each item in the list is a single dataframe in the same order
+as the input file names.</dd>
+</dl></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul>
+<li><a href="#energy-weather-analytics-demo">Energy &amp; Weather Analytics (Demo)</a></li>
+<li><a href="#on-html-rendering">On HTML Rendering</a></li>
+<li><a href="#on-documentation">On Documentation</a><ul>
+<li><a href="#visualization-of-energy-analytics-results">Visualization of Energy Analytics Results</a></li>
+</ul>
+</li>
+<li><a href="#running-the-code">Running the code</a></li>
+<li><a href="#author-license">Author &amp; License</a></li>
+</ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="main.graph_energy_meter" href="#main.graph_energy_meter">graph_energy_meter</a></code></li>
+<li><code><a title="main.graph_energy_meter_clusters" href="#main.graph_energy_meter_clusters">graph_energy_meter_clusters</a></code></li>
+<li><code><a title="main.graph_energy_month" href="#main.graph_energy_month">graph_energy_month</a></code></li>
+<li><code><a title="main.graph_weather_energy_meter_clusters" href="#main.graph_weather_energy_meter_clusters">graph_weather_energy_meter_clusters</a></code></li>
+<li><code><a title="main.main" href="#main.main">main</a></code></li>
+<li><code><a title="main.read" href="#main.read">read</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.5</a>.</p>
+</footer>
+</body>
+</html>
