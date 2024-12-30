@@ -19,9 +19,10 @@ Note that rendering times for some of the HTML files generated could be a bit
 slow. So be patient when loading. I haven't really done any optimization for
 rendering into a web browser
 
-This code, when executed without parameters should take about a minute or
+This code, when executed without parameters should take about a three minutes or
 so to fully run and will produce four sets of html graphs that can be 
-viewed in a web browser:
+viewed in a web browser. These graphs will automatically load up in your default 
+browser. But patience needed!
 
 ### On Documentation
 
@@ -102,6 +103,24 @@ TO RUN this code simply call:
 4. To regenerate docs use
    
    <pre>pdoc main --html --output-dir . --force</pre>
+
+
+### On Bugs and Future Work
+
+I've noted a few bugs with the current code. For instance
+
+1. The use of tempfile to store html temp files mean that the html doesn't persist. For casuaul users this means that the html map data is not available for viewing unless the code is rerun
+2. Autoencoder based clustering doesn't work deterministically and gives different clusters for different runs. This is problematic as some consistency is needed. 
+3. Current GPS location is not correct. Need to get the correct format as data should be from Doha. 
+4. Fix tensor flow warning on execution and double check pip requirements.txt file. 
+
+
+**Future Work**
+
+1. Some kind of predictive formula should be generated from the work to provide a meaingful insights. Clusters need to be labeled with meaningful labels that provide predictive insights on the type of household to feedback into policy infrastructure on energy consumption controls
+2. Need to get correct GPS coordinate format from HBKU
+3. Need to incorporate other household data to work out the meaning behind clusters. Some data to be provided by HBKU
+4. Paper publication to provide meaningful insights to users.  
 
 
 ### Author & License
