@@ -127,7 +127,7 @@ from bokeh.models import NumeralTickFormatter, DatetimeTickFormatter, Range1d, L
 from bokeh.transform import linear_cmap
 from datetime import datetime
 import folium
-from pyproj import Transformer
+from pyproj import CRS, Proj, Transformer
 import tempfile
 from itertools import cycle
 import statsmodels.api as sm
@@ -510,9 +510,13 @@ def graph_energy_meter_clusters (outputfile, data, rng=None):
     # Define the transformer with the appropriate EPSG codes
     transformer = Transformer.from_crs("epsg:32636", "epsg:4326", always_xy=True)
 
-    # List of coordinates extracted and converted to latitude and longitude
+    # Transform and apply the offsets
     coordinates = [(i, j) for i, j in zip(meter_data['X Coordinate'], meter_data['Y Coordinate'])]
     coordinates_lat_lon = [transformer.transform(x, y) for x, y in coordinates]
+
+    # List of coordinates extracted and converted to latitude and longitude
+    # coordinates = [(i, j) for i, j in zip(meter_data['X Coordinate'], meter_data['Y Coordinate'])]
+    # coordinates_lat_lon = [transformer.transform(x, y) for x, y in coordinates]
 
     # Map cluster numbers to colors using Viridis256 palette
     unique_clusters = sorted(set(clusters))
@@ -559,11 +563,17 @@ def graph_energy_meter_clusters (outputfile, data, rng=None):
     folium.LayerControl().add_to(m)
 
     # Save the folium map to a temporary HTML file
-    temp_map_file = tempfile.NamedTemporaryFile(delete=False, suffix='.html')
-    m.save(temp_map_file.name)
+    # temp_map_file = tempfile.NamedTemporaryFile(delete=False, suffix='.html')
+    # m.save(temp_map_file.name)
+
+    # Define the file path where you want to save the HTML file
+    file_path = f"{outputfile}-iframe.html"
+
+    # Save the folium map to the specified file
+    m.save(file_path)
 
     # Create a Bokeh Div to display the folium map
-    map_div = Div(text=f'<iframe src="{temp_map_file.name}" width="700" height="400"></iframe> \
+    map_div = Div(text=f'<iframe src="{file_path}" width="700" height="400"></iframe> \
                          <br><h3 align="center" style="font-size:14px"><b>Meters Clustered by Similarity in Energy Consumption</b></h3>')
 
     ##################################################
@@ -873,7 +883,7 @@ def graph_weather_energy_meter_clusters(outputfile, data, rng=None):
     ##################################################
     # Define the transformer with the appropriate EPSG codes
     transformer = Transformer.from_crs("epsg:32636", "epsg:4326", always_xy=True)
-
+ 
     # Store the cluster numbers along with the meter ids and total energy
     # consumptions into the meter_data dataframe - we had removed some of 
     # these values from the origiinal data, now we're adding them 
@@ -888,9 +898,13 @@ def graph_weather_energy_meter_clusters(outputfile, data, rng=None):
     meter_data['X Coordinate'] = list(data_electrical['X Coordinate'])
     meter_data['Y Coordinate'] = list(data_electrical['Y Coordinate'])
 
-    # List of coordinates extracted and converted to latitude and longitude
+    # Transform and apply the offsets
     coordinates = [(i, j) for i, j in zip(meter_data['X Coordinate'], meter_data['Y Coordinate'])]
     coordinates_lat_lon = [transformer.transform(x, y) for x, y in coordinates]
+
+    # List of coordinates extracted and converted to latitude and longitude
+    # coordinates = [(i, j) for i, j in zip(meter_data['X Coordinate'], meter_data['Y Coordinate'])]
+    # coordinates_lat_lon = [transformer.transform(x, y) for x, y in coordinates]
 
     # Grab the unique cluster numbers / ids
     unique_clusters = sorted(set(clusters))
@@ -938,11 +952,17 @@ def graph_weather_energy_meter_clusters(outputfile, data, rng=None):
     folium.LayerControl().add_to(m)
 
     # Save the folium map to a temporary HTML file
-    temp_map_file = tempfile.NamedTemporaryFile(delete=False, suffix='.html')
-    m.save(temp_map_file.name)
+    # temp_map_file = tempfile.NamedTemporaryFile(delete=False, suffix='.html')
+    # m.save(temp_map_file.name)
+
+    # Define the file path where you want to save the HTML file
+    file_path = f"{outputfile}-iframe.html"
+
+    # Save the folium map to the specified file
+    m.save(file_path)
 
     # Create a Bokeh Div to display the folium map
-    p3 = Div(text=f'<iframe src="{temp_map_file.name}" width="600" height="400"></iframe> \
+    p3 = Div(text=f'<iframe src="{file_path}" width="600" height="400"></iframe> \
                          <br><h3 align="center" style="font-size:14px"><b>Meters Clustered by Correlation to Weather Params</b></h3>')
 
 

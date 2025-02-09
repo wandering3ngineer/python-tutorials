@@ -109,7 +109,7 @@ TO RUN this code simply call:
 
 I've noted a few bugs with the current code. For instance
 
-1. The use of tempfile to store html temp files mean that the html doesn't persist. For casuaul users this means that the html map data is not available for viewing unless the code is rerun
+1. ~~The use of tempfile to store html temp files mean that the html doesn't persist. For casuaul users this means that the html map data is not available for viewing unless the code is rerun~~ FIXED
 2. Autoencoder based clustering doesn't work deterministically and gives different clusters for different runs. This is problematic as some consistency is needed. 
 3. Current GPS location is not correct. Need to get the correct format as data should be from Doha. 
 4. Fix tensor flow warning on execution and double check pip requirements.txt file. 
